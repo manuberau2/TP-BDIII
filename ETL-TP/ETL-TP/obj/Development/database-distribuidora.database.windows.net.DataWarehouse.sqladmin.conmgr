@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="database-distribuidora.database.windows.net.DataWarehouse.sqladmin"
+  DTS:DTSID="{A9345036-F7EE-43E5-B855-208749227F12}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Application Name=SSIS-ETL-TP-{A9345036-F7EE-43E5-B855-208749227F12}database-distribuidora.database.windows.net.DataWarehouse.sqladmin;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAACAAAAAAAQZgAAAAEAACAAAADZ7h2WTUNGBYKDknW2JFH3QAPqImrBNtWr4Wi9MHOPowAAAAAOgAAAAAIAACAAAAAn4ersxd6xrJ/Qaqbq2oiuII2hMbwnikMKilVcQkf3W4AAAABRTCmHoqbXRWMi2JSD7MENgHX0kwogsB3Lfrzbg3/NcdEb4lZ4Dn0tROZMApwRzHIjqs5SIc5ugHNeYGNhbMiqoxVRjI7ndd9TsYhw/hhUabN+8bGJfWCIMdpL0gKeywqYVjfsJluXsyd533cDzwrIILjZC3OQ4vgV0RG/IrMDHEAAAACNTCK+6tiXHcEJp7SPaAqiqOa3e8p2i2m71OGKVuoECxcr3jDj5iGFEoJEKMr3oT9uWPxtxSSV77tMUS3EKQ0e</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

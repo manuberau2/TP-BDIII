@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="RecursosHumanos"
+  DTS:DTSID="{3381B149-3FF1-4521-ADF7-02E565BC9CF8}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="server=tcp:database-distribuidora.database.windows.net,1433;uid=sqladmin;Driver={ODBC Driver 18 for SQL Server};database=RecursosHumanos;encrypt=yes;trustservercertificate=no;connection timeout=30;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAACAAAAAAAQZgAAAAEAACAAAACEeDEntR2nfzd4ysTPKPNhdm5MCE6XSeDecHZGD7hMMQAAAAAOgAAAAAIAACAAAACHbY2lwHEt9wDFkDklzdDLs48UhypWqKTSOtwA2eP+ZHAAAACqCdgpvyUERodGgw0/MJGUnAOCZMbGFBJAVjwOglgEn5dRFFEEVYTr01KBzpqXUF4DEGm7IgTgAQ8K0bwc2vbjEv6qonGbsstfA1OX0rC2FgqosiqoY442arGXzra7ETsmIPvgrQRDo0e0YyI0WOX8QAAAAE/1ru0vNyqodBkoSrm5PlWClNdsNsUIRUfsFBnXm9ioYY71cSGKUErir40k5qXyikFgjEnDISYWGp2u/uNBE20=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/CREATE_DW.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/CREATE_TABLES_FACTURACION_VENTAS.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/CREATE_TABLES_RRHH.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/DELETE_DW.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/DELETE_TABLES_FACTURACION_VENTAS.sql" dialect="AZURE" />
+    <file url="file://$PROJECT_DIR$/DELETE_TABLES_RRHH.sql" dialect="AZURE" />
+    <file url="PROJECT" dialect="AZURE" />
+  </component>
+</project>

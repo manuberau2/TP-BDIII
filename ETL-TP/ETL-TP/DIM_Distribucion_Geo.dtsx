@@ -1,0 +1,910 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/15/2025 11:38:05 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-LLKMOUHN"
+  DTS:CreatorName="LAPTOP-LLKMOUHN\manub"
+  DTS:DTSID="{1F400F95-2EAD-4308-A16D-13E818862898}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="11274"
+  DTS:ObjectName="DIM_Distribucion_Geo"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{89D1D55E-7E0E-4683-ACF6-C7013528CBF8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Actualizar registros existentes"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D2D50F66-3124-43F2-B568-76676EB62BDB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar registros existentes"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar registro dummy"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F5915B2F-1FD1-4D2D-ACA4-BAC217D94E61}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar registro dummy"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar registro dummy\Cargar registro dummy"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Cargar registro dummy"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_distribucion_geografica]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[distribucion_geografica_key]"
+                      cachedDataType="i4"
+                      cachedName="distribucion_geografica_key"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[distribucion_geografica_key]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[distribucion_geografica_key]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[zona]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="zona"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[zona]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[zona]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[provincia]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="provincia"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[provincia]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[provincia]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[departamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="departamento"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[departamento]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[departamento]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[ciudad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ciudad"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[ciudad]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[ciudad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[distribucion_geografica_key]"
+                      dataType="i4"
+                      name="distribucion_geografica_key" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[zona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="zona" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[provincia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="provincia" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[departamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ciudad" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Existe el dummy?"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Existe el dummy?"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input].Columns[Dummy]"
+                      cachedDataType="i4"
+                      cachedName="Dummy"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Existe]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Existe"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]} &gt; 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Dummy &gt; 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[No existe]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="No existe"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Dummy == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Leer registro dummy"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Leer registro dummy"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select count(*) as Dummy From dbo.DIM_distribucion_geografica where distribucion_geografica_key = 9999</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].ExternalColumns[Dummy]"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]"
+                      name="Dummy"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].ExternalColumns[Dummy]"
+                      dataType="i4"
+                      name="Dummy" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[Dummy]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[Dummy]"
+                      name="Dummy" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Preparar datos"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Preparar datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[distribucion_geografica_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[distribucion_geografica_key]"
+                      name="distribucion_geografica_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">9999</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">9999</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[zona]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[zona]"
+                      name="zona"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,3,1252)"ASD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"ASD"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[provincia]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[provincia]"
+                      name="provincia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,3,1252)"ASD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"ASD"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[departamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[departamento]"
+                      name="departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,3,1252)"ASD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"ASD"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[ciudad]"
+                      name="ciudad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,3,1252)"ASD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"ASD"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar registro dummy.Paths[Derived Column Output]"
+              endId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar registro dummy.Paths[No existe]"
+              endId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]"
+              name="No existe"
+              startId="Package\Cargar registro dummy\Existe el dummy?.Outputs[No existe]" />
+            <path
+              refId="Package\Cargar registro dummy.Paths[OLE DB Source Output]"
+              endId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar nuevos registros"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F1ED6F7E-D80E-4E15-B88A-3B34AFB363EE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar nuevos registros"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{D6160297-4D19-4B30-A2A5-6139A44764E9}"
+      DTS:From="Package\Cargar registro dummy"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Actualizar registros existentes" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E68D67B2-ECC8-4A81-BD5D-451C3D2A42F6}"
+      DTS:From="Package\Actualizar registros existentes"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Insertar nuevos registros" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153.333333333334,42.6666666666667"
+          Id="Package\Cargar registro dummy"
+          TopLeft="184.999991729856,69.1052623991326" />
+        <NodeLayout
+          Size="221.333333333334,42.6666666666667"
+          Id="Package\Actualizar registros existentes"
+          TopLeft="310.624986113981,180.631576964069" />
+        <NodeLayout
+          Size="196.666666666667,42.6666666666667"
+          Id="Package\Insertar nuevos registros"
+          TopLeft="174.999992176891,264.789470776874" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="261.666658396523,111.771929065799">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.291661050792,68.8596478982701"
+              Start="0,0"
+              End="130.291661050792,61.3596478982701">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.429823949135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.429823949135"
+                    Point2="0,34.429823949135"
+                    Point3="4,34.429823949135" />
+                  <mssgle:LineSegment
+                    End="126.291661050792,34.429823949135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.291661050792,34.429823949135"
+                    Point2="130.291661050792,34.429823949135"
+                    Point3="130.291661050792,38.429823949135" />
+                  <mssgle:LineSegment
+                    End="130.291661050792,61.3596478982701" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="391.958319447314,223.298243630736">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-135.62499393709,41.4912271461384"
+              Start="0,0"
+              End="-135.62499393709,33.9912271461384">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7456135730692" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7456135730692"
+                    Point2="0,20.7456135730692"
+                    Point3="-4,20.7456135730692" />
+                  <mssgle:LineSegment
+                    End="-131.62499393709,20.7456135730692" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-131.62499393709,20.7456135730692"
+                    Point2="-135.62499393709,20.7456135730692"
+                    Point3="-135.62499393709,24.7456135730692" />
+                  <mssgle:LineSegment
+                    End="-135.62499393709,33.9912271461384" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar registro dummy">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Cargar registro dummy\Leer registro dummy"
+          TopLeft="140.624993713573,54.7368415042634" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Cargar registro dummy\Existe el dummy?"
+          TopLeft="149.374993322417,149.842103617921" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Cargar registro dummy\Cargar registro dummy"
+          TopLeft="130.624994160608,310.982452864902" />
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[OLE DB Source Output]"
+          TopLeft="217.958327046906,97.4035081709301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.0833329421779,52.4385954469911"
+              Start="0,0"
+              End="10.0833329421779,44.9385954469911">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2192977234955" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2192977234955"
+                    Point2="0,26.2192977234955"
+                    Point3="4,26.2192977234955" />
+                  <mssgle:LineSegment
+                    End="6.08333294217789,26.2192977234955" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.08333294217789,26.2192977234955"
+                    Point2="10.0833329421779,26.2192977234955"
+                    Point3="10.0833329421779,30.2192977234955" />
+                  <mssgle:LineSegment
+                    End="10.0833329421779,44.9385954469911" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Cargar registro dummy\Preparar datos"
+          TopLeft="312.499986030162,235.982454149539" />
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[No existe]"
+          TopLeft="228.041659989084,192.508770284588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="162.458326041078,43.4736838649514"
+              Start="0,0"
+              End="162.458326041078,35.9736838649514">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7368419324757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.7368419324757"
+                    Point2="0,21.7368419324757"
+                    Point3="4,21.7368419324757" />
+                  <mssgle:LineSegment
+                    End="158.458326041078,21.7368419324757" />
+                  <mssgle:CubicBezierSegment
+                    Point1="158.458326041078,21.7368419324757"
+                    Point2="162.458326041078,21.7368419324757"
+                    Point3="162.458326041078,25.7368419324757" />
+                  <mssgle:LineSegment
+                    End="162.458326041078,35.9736838649514" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="60.3328153642889,26.7368419324757,41.7926953125,9.470703125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[Derived Column Output]"
+          TopLeft="390.499986030162,278.649120816206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-172.541658536221,32.3333320486965"
+              Start="0,0"
+              End="-172.541658536221,24.8333320486965">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.1666660243483" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.1666660243483"
+                    Point2="0,16.1666660243483"
+                    Point3="-4,16.1666660243483" />
+                  <mssgle:LineSegment
+                    End="-168.541658536221,16.1666660243483" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-168.541658536221,16.1666660243483"
+                    Point2="-172.541658536221,16.1666660243483"
+                    Point3="-172.541658536221,20.1666660243483" />
+                  <mssgle:LineSegment
+                    End="-172.541658536221,24.8333320486965" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar registro dummy\Leer registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar registro dummy\Cargar registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
