@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/15/2025 11:38:05 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="DIM_Distribucion_Geo"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{68EE9099-01FF-4030-998A-737302F9F9EF}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{C9782515-5B31-4C52-B137-247ABE401466}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4TKZlikwAXgHCsXnYpj1MD2PvaIEDDzNCZmxeDT2pngAAAAAOgAAAAAIAACAAAADUCMWMscO9tlMZqq9VfzuQeI6G5rSHF8FE/bRm0XP6ySAAAAARW5OTZAUWkIyW94ZGTUkSPadzpQzhj5gXjqpN2ZMot0AAAAB4NIYmW1iw/9mQsXx8ISSUfYlQsRp8LGiiAMlOIGVmgzENAbpvtfkEjdI+V08CCVgntDH+N/kl121bNpRi+bxb</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVHGMy+QZohll9TLopiXimUoXwij+uKz4TNNuC3KwBPAAAAAAOgAAAAAIAACAAAACbiqJmNHtDYuYS6aRCVF5HxVXdE7T6CBERmAB9zykbgyAAAACEQSkQzsw8842vGpHrQSsZimanDuwjLVQxmhx+IOo9E0AAAADLwftoMe94tIFJYcWPaUCmzIgyAf3TmzbQLECk9c2Efam7DgZ7cxPaZS6y8lm2dQmfsmU6q9ghvUq4teri6oQl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3276,7 +3276,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{39BEB281-8F9F-4B3C-B88B-AA72407C973F}"
+      DTS:DTSID="{11188A28-0336-4FD2-88F1-DEA02915E3FE}"
       DTS:From="Package\Cargar registro dummy"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"

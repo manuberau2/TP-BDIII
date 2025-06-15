@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/15/2025 11:42:48 AM"
@@ -1737,7 +1737,7 @@ WHERE tiempo_key = ?
                       refId="Package\Insertar nuevos registros\Sort.Inputs[Sort Input].Columns[tiempo_key]"
                       cachedDataType="i4"
                       cachedName="tiempo_key"
-                      lineageId="Package\Insertar nuevos registros\236:invalid">
+                      lineageId="Package\Insertar nuevos registros\448:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1754,7 +1754,7 @@ WHERE tiempo_key = ?
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="fecha"
-                      lineageId="Package\Insertar nuevos registros\237:invalid">
+                      lineageId="Package\Insertar nuevos registros\449:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1770,7 +1770,7 @@ WHERE tiempo_key = ?
                       refId="Package\Insertar nuevos registros\Sort.Inputs[Sort Input].Columns[mes]"
                       cachedDataType="i4"
                       cachedName="mes"
-                      lineageId="Package\Insertar nuevos registros\238:invalid">
+                      lineageId="Package\Insertar nuevos registros\450:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1786,7 +1786,7 @@ WHERE tiempo_key = ?
                       refId="Package\Insertar nuevos registros\Sort.Inputs[Sort Input].Columns[anio]"
                       cachedDataType="i4"
                       cachedName="anio"
-                      lineageId="Package\Insertar nuevos registros\239:invalid">
+                      lineageId="Package\Insertar nuevos registros\451:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1804,7 +1804,7 @@ WHERE tiempo_key = ?
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="mes_nombre"
-                      lineageId="Package\Insertar nuevos registros\240:invalid">
+                      lineageId="Package\Insertar nuevos registros\452:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1820,7 +1820,7 @@ WHERE tiempo_key = ?
                       refId="Package\Insertar nuevos registros\Sort.Inputs[Sort Input].Columns[dia]"
                       cachedDataType="i4"
                       cachedName="dia"
-                      lineageId="Package\Insertar nuevos registros\241:invalid">
+                      lineageId="Package\Insertar nuevos registros\453:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1838,7 +1838,7 @@ WHERE tiempo_key = ?
                       cachedDataType="str"
                       cachedLength="20"
                       cachedName="dia_nombre"
-                      lineageId="Package\Insertar nuevos registros\242:invalid">
+                      lineageId="Package\Insertar nuevos registros\454:invalid">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1904,7 +1904,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\236:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\448:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1918,7 +1918,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\237:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\449:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1931,7 +1931,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\238:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\450:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1944,7 +1944,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\239:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\451:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1959,7 +1959,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\240:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\452:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1972,7 +1972,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\241:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\453:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1987,7 +1987,7 @@ WHERE tiempo_key = ?
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Insertar nuevos registros\242:invalid}</property>
+                          name="SortColumnId">#{Package\Insertar nuevos registros\454:invalid}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn

@@ -2,13 +2,58 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ETL-TP</Name>
-    <LastWriteTime>2025-06-14T23:39:30.1107632Z</LastWriteTime>
+    <LastWriteTime>2025-06-15T22:03:05.5667178Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DIM_Tiempo.dtsx</Name>
-      <LastWriteTime>2025-06-14T23:47:33.936074Z</LastWriteTime>
+      <LastWriteTime>2025-06-15T22:03:05.3940425Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Distribucion_Geo.dtsx</Name>
+      <LastWriteTime>2025-06-15T23:01:42.0691205Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Producto.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.7511258Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Rubro.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.7511258Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Sueldo.dtsx</Name>
+      <LastWriteTime>2025-06-15T22:03:05.4819108Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Antiguedad.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.74671Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Capacitacion.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.7480841Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DIM_Vendedor.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.7550903Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FACT_Ventas.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.7599673Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FACT_Desempeno_Vendedores.dtsx</Name>
+      <LastWriteTime>2025-06-15T16:32:46.758466Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
