@@ -26,12 +26,12 @@ CREATE TABLE DIM_tiempo (
 );
 
 CREATE TABLE DIM_rubro (
-    rubro_key   INT PRIMARY KEY,
+    rubro_key   INT IDENTITY(1,1) PRIMARY KEY,
     sector      VARCHAR(100)
 );
 
 CREATE TABLE DIM_vendedor (
-    vendedor_key INT PRIMARY KEY,
+    vendedor_key INT IDENTITY(1,1) PRIMARY KEY,
     nombre       VARCHAR(150)
 );
 

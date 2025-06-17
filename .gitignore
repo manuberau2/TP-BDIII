@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# SSIS y binarios
+*.ispac
+*.conmgr
+*.dtproj.user
+*.cache
+*.dbmdl
+ETL-TP/ETL-TP/bin/
+ETL-TP/ETL-TP/obj/

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="database-distribuidora.database.windows.net.FacturacionVentas.sqladmin1"
+  DTS:DTSID="{63ED3186-947A-43F7-8056-FCF0C0D05E76}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=FacturacionVentas;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-ETL-TP-{63ED3186-947A-43F7-8056-FCF0C0D05E76}database-distribuidora.database.windows.net.FacturacionVentas.sqladmin1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAACAAAAAAAQZgAAAAEAACAAAAB2wg7x9OKSufMVZaTT1NwHQEzNiduGtQ5+D7Nx+tA9igAAAAAOgAAAAAIAACAAAAD9sb1bxIH3jQ+tGB6/TCYna8rM3Ej3uHacQ21EA2tkqYAAAADtiB1QZ4OJogwUMDOVqpjwPc+KR8MBINb5tFnsrOJfWNtI87/tFe2gkg/I0yhHL1SYJdo36xhis1Eh4xys8zTmxvxJkjrjHkzM6dAaphKt8DiiOsP5ICa6Wm3CmMRsoTL88G6qOKtxCGuItNrwBimjijnL+ER8Tl2H6PM+lCT0zUAAAADpS7cGA7WyTIcNXMUVa7ohdLUBxWoAHrF/rWLoR1m63/VXVkXu7PGXERZyz4Z5SqiewQBJYKXwb/VAHoxjsDxB</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

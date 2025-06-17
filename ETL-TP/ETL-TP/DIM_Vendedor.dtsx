@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/15/2025 11:44:01 AM"
@@ -11,9 +11,1501 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{F97B56D5-CAEB-49D2-B474-C94075E73F34}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{C4C1F80A-4DFC-4D95-A1C6-EEA53A4AFC3F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Cargar registro dummy"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b18dfc91-5756-4e2f-858e-59ca1693a7ba}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar registro dummy"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar registro dummy\Cargar registro dummy"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Cargar registro dummy"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_vendedor]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[vendedor_key]"
+                      cachedDataType="i4"
+                      cachedName="vendedor_key"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[vendedor_key]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[vendedor_key]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="nombre"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[nombre]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[nombre]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[vendedor_key]"
+                      dataType="i4"
+                      name="vendedor_key" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="nombre" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Cargar registro dummy.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Existe el dummy?"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Existe el dummy?"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input].Columns[Dummy]"
+                      cachedDataType="i4"
+                      cachedName="Dummy"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Existe]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Existe"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]} &gt; 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Dummy &gt; 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[No existe]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="No existe"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Dummy == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Existe el dummy?.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Leer registro dummy"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Leer registro dummy"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select count(*) as Dummy From dbo.DIM_vendedor where vendedor_key = 999</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].ExternalColumns[Dummy]"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].Columns[Dummy]"
+                      name="Dummy"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output].ExternalColumns[Dummy]"
+                      dataType="i4"
+                      name="Dummy" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[Dummy]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[Dummy]"
+                      name="Dummy" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar registro dummy\Preparar datos"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Preparar datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[vendedor_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[vendedor_key]"
+                      name="vendedor_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">999</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">999</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[nombre]"
+                      name="nombre"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,3,1252)"ASD"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"ASD"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar registro dummy.Paths[Derived Column Output]"
+              endId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar registro dummy.Paths[No existe]"
+              endId="Package\Cargar registro dummy\Preparar datos.Inputs[Derived Column Input]"
+              name="No existe"
+              startId="Package\Cargar registro dummy\Existe el dummy?.Outputs[No existe]" />
+            <path
+              refId="Package\Cargar registro dummy.Paths[OLE DB Source Output]"
+              endId="Package\Cargar registro dummy\Existe el dummy?.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Cargar registro dummy\Leer registro dummy.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar nuevos registros"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b0032eef-0dd0-4487-9c42-0c78fbe93a8c}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar nuevos registros"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insertar nuevos registros\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[DIM_vendedor]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar nuevos registros\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="nombre"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[nombre]"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[nombre]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[vendedor_key]"
+                      dataType="i4"
+                      name="vendedor_key" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="nombre" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar nuevos registros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar nuevos registros\Leer DIM_Tiempo"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Leer DIM_Tiempo"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DIM_rubro]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Connections[OleDbConnection]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].Columns[rubro_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].ExternalColumns[rubro_key]"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].Columns[rubro_key]"
+                      name="rubro_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].Columns[sector]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].ExternalColumns[sector]"
+                      length="100"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].Columns[sector]"
+                      name="sector"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].ExternalColumns[rubro_key]"
+                      dataType="i4"
+                      name="rubro_key" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Output].ExternalColumns[sector]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="sector" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[rubro_key]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[rubro_key]"
+                      name="rubro_key" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[sector]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[sector]"
+                      name="sector" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar nuevos registros\Ordenar"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación].Columns[id_vendedor]"
+                      cachedDataType="i4"
+                      cachedName="id_vendedor"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[id_vendedor]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación].Columns[nombre]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="nombre"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[nombre]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación].Columns[direccion]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="direccion"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[direccion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación].Columns[telefono]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="telefono"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[telefono]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación].Columns[especialidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="especialidad"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[especialidad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[id_vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[id_vendedor]"
+                      name="id_vendedor"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[id_vendedor]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[nombre]"
+                      name="nombre"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[nombre]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[direccion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[direccion]"
+                      name="direccion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[direccion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[telefono]"
+                      name="telefono">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[telefono]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[especialidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación].Columns[especialidad]"
+                      name="especialidad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[especialidad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar nuevos registros\vendedor"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="vendedor"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Vendedores]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar nuevos registros\vendedor.Connections[OleDbConnection]"
+                  connectionManagerID="{63ED3186-947A-43F7-8056-FCF0C0D05E76}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin1]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[id_vendedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[id_vendedor]"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[id_vendedor]"
+                      name="id_vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre]"
+                      length="150"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[nombre]"
+                      name="nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[direccion]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[direccion]"
+                      length="200"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[direccion]"
+                      name="direccion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[telefono]"
+                      length="20"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[telefono]"
+                      name="telefono"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[especialidad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[especialidad]"
+                      length="100"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].Columns[especialidad]"
+                      name="especialidad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[id_vendedor]"
+                      dataType="i4"
+                      name="id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      name="nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[direccion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="direccion" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="telefono" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB].ExternalColumns[especialidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="especialidad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[id_vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[id_vendedor]"
+                      name="id_vendedor" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="150"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[nombre]"
+                      name="nombre" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[direccion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[direccion]"
+                      name="direccion" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[telefono]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[telefono]"
+                      name="telefono" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[especialidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[especialidad]"
+                      name="especialidad" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insertar nuevos registros.Paths[Salida de ordenación]"
+              endId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de ordenación"
+              startId="Package\Insertar nuevos registros\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB]"
+              endId="Package\Insertar nuevos registros\Ordenar.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Insertar nuevos registros\vendedor.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{857551cc-ac09-4341-87e9-1ab5c1a8a1b8}"
+      DTS:From="Package\Cargar registro dummy"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Insertar nuevos registros" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,43"
+          Id="Package\Cargar registro dummy"
+          TopLeft="69.999999552965,60" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Insertar nuevos registros"
+          TopLeft="60,255.684208377741" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="146.499999552965,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13.500000447035,152.684208377741"
+              Start="0,0"
+              End="13.500000447035,145.184208377741">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,72.3421041888707" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,72.3421041888707"
+                    Point2="0,76.3421041888707"
+                    Point3="4,76.3421041888707" />
+                  <mssgle:LineSegment
+                    End="9.50000044703501,76.3421041888707" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.50000044703501,76.3421041888707"
+                    Point2="13.500000447035,76.3421041888707"
+                    Point3="13.500000447035,80.3421041888707" />
+                  <mssgle:LineSegment
+                    End="13.500000447035,145.184208377741" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar registro dummy">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="155,43"
+          Id="Package\Cargar registro dummy\Leer registro dummy"
+          TopLeft="140.624993713573,54.7368415042634" />
+        <NodeLayout
+          Size="157,43"
+          Id="Package\Cargar registro dummy\Existe el dummy?"
+          TopLeft="180.374993322417,149.842103617921" />
+        <NodeLayout
+          Size="156,43"
+          Id="Package\Cargar registro dummy\Preparar datos"
+          TopLeft="372.499986030162,259.982454149539" />
+        <NodeLayout
+          Size="175,43"
+          Id="Package\Cargar registro dummy\Cargar registro dummy"
+          TopLeft="177.624994160608,353.982452864902" />
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[Derived Column Output]"
+          TopLeft="450.499986030162,302.982454149539">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-185.374991869554,50.999998715363"
+              Start="0,0"
+              End="-185.374991869554,43.499998715363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4999993576815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4999993576815"
+                    Point2="0,25.4999993576815"
+                    Point3="-4,25.4999993576815" />
+                  <mssgle:LineSegment
+                    End="-181.374991869554,25.4999993576815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.374991869554,25.4999993576815"
+                    Point2="-185.374991869554,25.4999993576815"
+                    Point3="-185.374991869554,29.4999993576815" />
+                  <mssgle:LineSegment
+                    End="-185.374991869554,43.499998715363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[OLE DB Source Output]"
+          TopLeft="218.124993713573,97.7368415042634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.749999608844,52.1052621136576"
+              Start="0,0"
+              End="40.749999608844,44.6052621136576">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0526310568288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.0526310568288"
+                    Point2="0,26.0526310568288"
+                    Point3="4,26.0526310568288" />
+                  <mssgle:LineSegment
+                    End="36.749999608844,26.0526310568288" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.749999608844,26.0526310568288"
+                    Point2="40.749999608844,26.0526310568288"
+                    Point3="40.749999608844,30.0526310568288" />
+                  <mssgle:LineSegment
+                    End="40.749999608844,44.6052621136576" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar registro dummy.Paths[No existe]"
+          TopLeft="258.874993322417,192.842103617921">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="191.624992707745,67.140350531618"
+              Start="0,0"
+              End="191.624992707745,59.640350531618">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.570175265809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.570175265809"
+                    Point2="0,33.570175265809"
+                    Point3="4,33.570175265809" />
+                  <mssgle:LineSegment
+                    End="187.624992707745,33.570175265809" />
+                  <mssgle:CubicBezierSegment
+                    Point1="187.624992707745,33.570175265809"
+                    Point2="191.624992707745,33.570175265809"
+                    Point3="191.624992707745,37.570175265809" />
+                  <mssgle:LineSegment
+                    End="191.624992707745,59.640350531618" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="74.9161486976225,38.570175265809,41.7926953125,9.470703125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar registro dummy\Leer registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar registro dummy\Cargar registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Insertar nuevos registros">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Insertar nuevos registros\vendedor"
+          TopLeft="492.5,345" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Insertar nuevos registros\Destino de OLE DB"
+          TopLeft="179.25,628.5" />
+        <NodeLayout
+          Size="155,43"
+          Id="Package\Insertar nuevos registros\Leer DIM_Tiempo"
+          TopLeft="76.25,357" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Insertar nuevos registros\Ordenar"
+          TopLeft="499,472" />
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB]"
+          TopLeft="556.75,387">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85"
+              Start="0,0"
+              End="0,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación]"
+          TopLeft="558.5,514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-291.75,114.5"
+              Start="0,0"
+              End="-291.75,107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.25"
+                    Point2="0,57.25"
+                    Point3="-4,57.25" />
+                  <mssgle:LineSegment
+                    End="-287.75,57.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-287.75,57.25"
+                    Point2="-291.75,57.25"
+                    Point3="-291.75,61.25" />
+                  <mssgle:LineSegment
+                    End="-291.75,107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar nuevos registros\vendedor">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar nuevos registros\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
