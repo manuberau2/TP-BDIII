@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>ETL-TP</Name>
-    <LastWriteTime>2025-06-15T22:03:05.5667178Z</LastWriteTime>
+    <LastWriteTime>2025-06-17T00:23:44.8796852Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DIM_Tiempo.dtsx</Name>
-      <LastWriteTime>2025-06-15T22:03:05.3940425Z</LastWriteTime>
+      <LastWriteTime>2025-06-15T23:11:07.9948224Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DIM_Distribucion_Geo.dtsx</Name>
-      <LastWriteTime>2025-06-15T23:01:42.0691205Z</LastWriteTime>
+      <LastWriteTime>2025-06-16T23:57:05.9803902Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DIM_Rubro.dtsx</Name>
-      <LastWriteTime>2025-06-15T16:32:46.7511258Z</LastWriteTime>
+      <LastWriteTime>2025-06-17T00:23:44.7986757Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="DIM_Distribucion_Geo"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{C9782515-5B31-4C52-B137-247ABE401466}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{7DFB99F2-1786-45F1-9725-2CFF3588A8CC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAVHGMy+QZohll9TLopiXimUoXwij+uKz4TNNuC3KwBPAAAAAAOgAAAAAIAACAAAACbiqJmNHtDYuYS6aRCVF5HxVXdE7T6CBERmAB9zykbgyAAAACEQSkQzsw8842vGpHrQSsZimanDuwjLVQxmhx+IOo9E0AAAADLwftoMe94tIFJYcWPaUCmzIgyAf3TmzbQLECk9c2Efam7DgZ7cxPaZS6y8lm2dQmfsmU6q9ghvUq4teri6oQl</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACb8acDObD/acEKpirNRfc9H3HUj0xWReTqhK1Oim5s1AAAAAAOgAAAAAIAACAAAAARAh+hjI5qczpdY1LOH82H4CISMbVMpYgt2NK2AXR6eSAAAABY2SAESNVJouL0xfAz9kCnAaH5Ovq2HxMMpgjGiF1ejUAAAAAHzIfz7dSji07wOrGv6fyj/kYTF0EwGLWmVF9iO/Id9rCvHppmqXYA6nolprvuiqBMR6om3wtz1mKuqmItLoWL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3276,7 +3276,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{11188A28-0336-4FD2-88F1-DEA02915E3FE}"
+      DTS:DTSID="{39BEB281-8F9F-4B3C-B88B-AA72407C973F}"
       DTS:From="Package\Cargar registro dummy"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
@@ -3494,105 +3494,91 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,43"
-          Id="Package\Insertar nuevos registros\Leer DIM_Tiempo"
-          TopLeft="60,332" />
+          Size="123,42"
+          Id="Package\Insertar nuevos registros\departamento"
+          TopLeft="750,64" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Insertar nuevos registros\Combinación de mezcla"
+          TopLeft="401,336" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Insertar nuevos registros\Ordenar 3"
+          TopLeft="708,204.473675405797" />
         <NodeLayout
           Size="170,42"
           Id="Package\Insertar nuevos registros\zona"
           TopLeft="382,60" />
         <NodeLayout
           Size="123,42"
-          Id="Package\Insertar nuevos registros\provincia"
-          TopLeft="581,61" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Insertar nuevos registros\departamento"
-          TopLeft="750,64" />
-        <NodeLayout
-          Size="123,42"
           Id="Package\Insertar nuevos registros\ciudad"
           TopLeft="909,72" />
         <NodeLayout
-          Size="119,42"
-          Id="Package\Insertar nuevos registros\Ordenar"
-          TopLeft="370,198" />
+          Size="175,42"
+          Id="Package\Insertar nuevos registros\Destino de OLE DB"
+          TopLeft="308,816" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Insertar nuevos registros\Combinación de mezcla 1"
+          TopLeft="629,546" />
         <NodeLayout
           Size="119,42"
           Id="Package\Insertar nuevos registros\Ordenar 1"
           TopLeft="895,213" />
         <NodeLayout
+          Size="128,42"
+          Id="Package\Insertar nuevos registros\Ordenar 4"
+          TopLeft="487,423" />
+        <NodeLayout
           Size="119,42"
           Id="Package\Insertar nuevos registros\Ordenar 2"
           TopLeft="538,202.473675405797" />
         <NodeLayout
-          Size="119,42"
-          Id="Package\Insertar nuevos registros\Ordenar 3"
-          TopLeft="708,204.473675405797" />
+          Size="155,43"
+          Id="Package\Insertar nuevos registros\Leer DIM_Tiempo"
+          TopLeft="60,332" />
         <NodeLayout
-          Size="196,42"
-          Id="Package\Insertar nuevos registros\Combinación de mezcla"
-          TopLeft="401,336" />
+          Size="205,42"
+          Id="Package\Insertar nuevos registros\Combinación de mezcla 2"
+          TopLeft="896,739" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Insertar nuevos registros\Ordenar 5"
+          TopLeft="763,636" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Insertar nuevos registros\provincia"
+          TopLeft="581,61" />
+        <NodeLayout
+          Size="119,42"
+          Id="Package\Insertar nuevos registros\Ordenar"
+          TopLeft="370,198" />
         <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB]"
-          TopLeft="467,102">
+          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB3]"
+          TopLeft="970.5,114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37.5,96"
+              EndConnector="-16,99"
               Start="0,0"
-              End="-37.5,88.5">
+              End="-16,91.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44" />
+                    End="0,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,44"
-                    Point2="0,48"
-                    Point3="-4,48" />
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="-4,49.5" />
                   <mssgle:LineSegment
-                    End="-33.5,48" />
+                    End="-12,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-33.5,48"
-                    Point2="-37.5,48"
-                    Point3="-37.5,52" />
+                    Point1="-12,49.5"
+                    Point2="-16,49.5"
+                    Point3="-16,53.5" />
                   <mssgle:LineSegment
-                    End="-37.5,88.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB1]"
-          TopLeft="642.5,103">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-45,99.473675405797"
-              Start="0,0"
-              End="-45,91.973675405797">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.7368377028985" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.7368377028985"
-                    Point2="0,49.7368377028985"
-                    Point3="-4,49.7368377028985" />
-                  <mssgle:LineSegment
-                    End="-41,49.7368377028985" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-41,49.7368377028985"
-                    Point2="-45,49.7368377028985"
-                    Point3="-45,53.7368377028985" />
-                  <mssgle:LineSegment
-                    End="-45,91.973675405797" />
+                    End="-16,91.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3636,31 +3622,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB3]"
-          TopLeft="970.5,114">
+          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB1]"
+          TopLeft="642.5,103">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16,99"
+              EndConnector="-45,99.473675405797"
               Start="0,0"
-              End="-16,91.5">
+              End="-45,91.973675405797">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
+                    End="0,45.7368377028985" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,45.5"
-                    Point2="0,49.5"
-                    Point3="-4,49.5" />
+                    Point1="0,45.7368377028985"
+                    Point2="0,49.7368377028985"
+                    Point3="-4,49.7368377028985" />
                   <mssgle:LineSegment
-                    End="-12,49.5" />
+                    End="-41,49.7368377028985" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12,49.5"
-                    Point2="-16,49.5"
-                    Point3="-16,53.5" />
+                    Point1="-41,49.7368377028985"
+                    Point2="-45,49.7368377028985"
+                    Point3="-45,53.7368377028985" />
                   <mssgle:LineSegment
-                    End="-16,91.5" />
+                    End="-45,91.973675405797" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3670,255 +3656,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación]"
-          TopLeft="429.5,240">
+          Id="Package\Insertar nuevos registros.Paths[Salida de origen de OLE DB]"
+          TopLeft="467,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38.1666666666667,96"
+              EndConnector="-37.5,96"
               Start="0,0"
-              End="38.1666666666667,88.5">
+              End="-37.5,88.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.1336032388664" />
+                    End="0,44" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,53.1336032388664"
-                    Point2="0,57.1336032388664"
-                    Point3="4,57.1336032388664" />
+                    Point1="0,44"
+                    Point2="0,48"
+                    Point3="-4,48" />
                   <mssgle:LineSegment
-                    End="34.1666666666667,57.1336032388664" />
+                    End="-33.5,48" />
                   <mssgle:CubicBezierSegment
-                    Point1="34.1666666666667,57.1336032388664"
-                    Point2="38.1666666666667,57.1336032388664"
-                    Point3="38.1666666666667,61.1336032388664" />
+                    Point1="-33.5,48"
+                    Point2="-37.5,48"
+                    Point3="-37.5,52" />
                   <mssgle:LineSegment
-                    End="38.1666666666667,88.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación1]"
-          TopLeft="597.5,244.473675405797">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-67.1666666666666,91.526324594203"
-              Start="0,0"
-              End="-67.1666666666666,84.026324594203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.471132450801" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.471132450801"
-                    Point2="0,54.471132450801"
-                    Point3="-4,54.471132450801" />
-                  <mssgle:LineSegment
-                    End="-63.1666666666666,54.471132450801" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-63.1666666666666,54.471132450801"
-                    Point2="-67.1666666666666,54.471132450801"
-                    Point3="-67.1666666666666,58.471132450801" />
-                  <mssgle:LineSegment
-                    End="-67.1666666666666,84.026324594203" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Insertar nuevos registros\Destino de OLE DB"
-          TopLeft="308,816" />
-        <NodeLayout
-          Size="128,42"
-          Id="Package\Insertar nuevos registros\Ordenar 4"
-          TopLeft="487,423" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de combinación de mezcla]"
-          TopLeft="499,378">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52,45"
-              Start="0,0"
-              End="52,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="48,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="48,22.5"
-                    Point2="52,22.5"
-                    Point3="52,26.5" />
-                  <mssgle:LineSegment
-                    End="52,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Insertar nuevos registros\Combinación de mezcla 1"
-          TopLeft="629,546" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación2]"
-          TopLeft="767.5,246.473675405797">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36,299.526324594203"
-              Start="0,0"
-              End="-36,292.026324594203">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,145.763162297102" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,145.763162297102"
-                    Point2="0,149.763162297102"
-                    Point3="-4,149.763162297102" />
-                  <mssgle:LineSegment
-                    End="-32,149.763162297102" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-32,149.763162297102"
-                    Point2="-36,149.763162297102"
-                    Point3="-36,153.763162297102" />
-                  <mssgle:LineSegment
-                    End="-36,292.026324594203" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación3]"
-          TopLeft="551,465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.666666666667,81"
-              Start="0,0"
-              End="147.666666666667,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.2236205227493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.2236205227493"
-                    Point2="0,48.2236205227493"
-                    Point3="4,48.2236205227493" />
-                  <mssgle:LineSegment
-                    End="143.666666666667,48.2236205227493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="143.666666666667,48.2236205227493"
-                    Point2="147.666666666667,48.2236205227493"
-                    Point3="147.666666666667,52.2236205227493" />
-                  <mssgle:LineSegment
-                    End="147.666666666667,73.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="128,42"
-          Id="Package\Insertar nuevos registros\Ordenar 5"
-          TopLeft="763,636" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de combinación de mezcla1]"
-          TopLeft="731.5,588">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="95.5,48"
-              Start="0,0"
-              End="95.5,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="4,24" />
-                  <mssgle:LineSegment
-                    End="91.5,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="91.5,24"
-                    Point2="95.5,24"
-                    Point3="95.5,28" />
-                  <mssgle:LineSegment
-                    End="95.5,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Insertar nuevos registros\Combinación de mezcla 2"
-          TopLeft="896,739" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación4]"
-          TopLeft="954.5,255">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.8333333333333,484"
-              Start="0,0"
-              End="76.8333333333333,476.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,284.151016456921" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,284.151016456921"
-                    Point2="0,288.151016456921"
-                    Point3="4,288.151016456921" />
-                  <mssgle:LineSegment
-                    End="72.8333333333333,288.151016456921" />
-                  <mssgle:CubicBezierSegment
-                    Point1="72.8333333333333,288.151016456921"
-                    Point2="76.8333333333333,288.151016456921"
-                    Point3="76.8333333333333,292.151016456921" />
-                  <mssgle:LineSegment
-                    End="76.8333333333333,476.5" />
+                    End="-37.5,88.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3962,6 +3724,176 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación4]"
+          TopLeft="954.5,255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.8333333333333,484"
+              Start="0,0"
+              End="76.8333333333333,476.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,284.151016456921" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,284.151016456921"
+                    Point2="0,288.151016456921"
+                    Point3="4,288.151016456921" />
+                  <mssgle:LineSegment
+                    End="72.8333333333333,288.151016456921" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.8333333333333,288.151016456921"
+                    Point2="76.8333333333333,288.151016456921"
+                    Point3="76.8333333333333,292.151016456921" />
+                  <mssgle:LineSegment
+                    End="76.8333333333333,476.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación3]"
+          TopLeft="551,465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.666666666667,81"
+              Start="0,0"
+              End="147.666666666667,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2236205227493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2236205227493"
+                    Point2="0,48.2236205227493"
+                    Point3="4,48.2236205227493" />
+                  <mssgle:LineSegment
+                    End="143.666666666667,48.2236205227493" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143.666666666667,48.2236205227493"
+                    Point2="147.666666666667,48.2236205227493"
+                    Point3="147.666666666667,52.2236205227493" />
+                  <mssgle:LineSegment
+                    End="147.666666666667,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación2]"
+          TopLeft="767.5,246.473675405797">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36,299.526324594203"
+              Start="0,0"
+              End="-36,292.026324594203">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,145.763162297102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,145.763162297102"
+                    Point2="0,149.763162297102"
+                    Point3="-4,149.763162297102" />
+                  <mssgle:LineSegment
+                    End="-32,149.763162297102" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32,149.763162297102"
+                    Point2="-36,149.763162297102"
+                    Point3="-36,153.763162297102" />
+                  <mssgle:LineSegment
+                    End="-36,292.026324594203" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación1]"
+          TopLeft="597.5,244.473675405797">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-67.1666666666666,91.526324594203"
+              Start="0,0"
+              End="-67.1666666666666,84.026324594203">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.471132450801" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.471132450801"
+                    Point2="0,54.471132450801"
+                    Point3="-4,54.471132450801" />
+                  <mssgle:LineSegment
+                    End="-63.1666666666666,54.471132450801" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-63.1666666666666,54.471132450801"
+                    Point2="-67.1666666666666,54.471132450801"
+                    Point3="-67.1666666666666,58.471132450801" />
+                  <mssgle:LineSegment
+                    End="-67.1666666666666,84.026324594203" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de ordenación]"
+          TopLeft="429.5,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.1666666666667,96"
+              Start="0,0"
+              End="38.1666666666667,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.1336032388664" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.1336032388664"
+                    Point2="0,57.1336032388664"
+                    Point3="4,57.1336032388664" />
+                  <mssgle:LineSegment
+                    End="34.1666666666667,57.1336032388664" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.1666666666667,57.1336032388664"
+                    Point2="38.1666666666667,57.1336032388664"
+                    Point3="38.1666666666667,61.1336032388664" />
+                  <mssgle:LineSegment
+                    End="38.1666666666667,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Insertar nuevos registros.Paths[Salida de combinación de mezcla2]"
           TopLeft="998.5,781">
           <EdgeLayout.Curve>
@@ -3987,6 +3919,74 @@
                     Point3="-603,21.5" />
                   <mssgle:LineSegment
                     End="-603,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de combinación de mezcla1]"
+          TopLeft="731.5,588">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.5,48"
+              Start="0,0"
+              End="95.5,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="91.5,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.5,24"
+                    Point2="95.5,24"
+                    Point3="95.5,28" />
+                  <mssgle:LineSegment
+                    End="95.5,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Salida de combinación de mezcla]"
+          TopLeft="499,378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,45"
+              Start="0,0"
+              End="52,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="48,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48,22.5"
+                    Point2="52,22.5"
+                    Point3="52,26.5" />
+                  <mssgle:LineSegment
+                    End="52,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
