@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-ETL-TP-{A9345036-F7EE-43E5-B855-208749227F12}database-distribuidora.database.windows.net.DataWarehouse.sqladmin;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAACAAAAAAAQZgAAAAEAACAAAADkWoaSchNOozEbEpid2Vzqlx6NNbC+RWw4RmwhQapPBgAAAAAOgAAAAAIAACAAAAB4FT++r/ZVVVTcXOqI9uSKeAWvqvItrM1EL3lzrBjDeYAAAAA/BqNY74rCKbagRiAQdiHiBPUHWuoybRVig+3AoPTMO2yKEBYNk1yj7go9YM3tChcj2zWdRIEeYJ0vTXURbwaVeHMzsbvgyIwplFWGYL3bTO5lq5mN5l5UOHk+cJW22pkCgpw0pV1hDJt+Tzggl20ou/ovvltEfu52vtGSFCqpGkAAAADOFg5hJYNrvUCN+mseRTEYa8fgJcq0mUhC07h8my/3+MA2zo2KQTOysRVnYGpCEURrU8/PudYCG4CSrY2dJuhX</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAACAAAAAAAQZgAAAAEAACAAAAAakgy9puY+QVn2beyz7/xz0VlSoMfOxzan9lnAkhnikgAAAAAOgAAAAAIAACAAAAD0iSqMv8pwvcaiz4w7Ysf84XeCI5x9PSxv+2pwM85S44AAAABbsUxgBT4kut+OP2VqLSj70hvM4XjXnaMckeHQXfKFzDofp1AyF3P8ZXf7OHqTE6yaw5wfFKdX3YQ5wcuGmUgnUAAytfYNbS9/WSR4BU4VvZKvgnU8OGMp2BGRkrJCqM+vAu8HKmbj9a7gpAt+kOxu+TWSj4Fr7S+cVQFJeVCPGEAAAACklFOMu+kB8oIkz+19J3ycqv/LcDV5I3h/4WPLc8HlTdQzJy2sXooSnBmKpTXkgiGiEebzbJknZfoAKJgIRVKG</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

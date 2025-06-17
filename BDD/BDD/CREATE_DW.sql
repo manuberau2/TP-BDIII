@@ -31,7 +31,7 @@ CREATE TABLE DIM_rubro (
 );
 
 CREATE TABLE DIM_vendedor (
-    vendedor_key INT PRIMARY KEY,
+    vendedor_key INT IDENTITY(1,1) PRIMARY KEY,
     nombre       VARCHAR(150)
 );
 
