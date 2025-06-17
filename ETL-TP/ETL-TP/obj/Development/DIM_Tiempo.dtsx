@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{6475C57B-EE6B-4595-AD89-C4804333BADE}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{FECE3DFF-717C-48AA-B84A-6CF3F3B295EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4043,15 +4043,15 @@ WHERE tiempo_key = ?
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="225,42"
+          Size="210,42"
           Id="Package\Actualizar registros existentes"
-          TopLeft="276.874987622723,147.789472061511" />
+          TopLeft="307.874987622723,159.789472061511" />
         <NodeLayout
           Size="152,42"
           Id="Package\Cargar dummy"
           TopLeft="156.874992987141,45.8421047598206" />
         <NodeLayout
-          Size="197,43"
+          Size="197.333333333334,42.6666666666667"
           Id="Package\Insertar nuevos registros"
           TopLeft="149.374993322417,241.526313137562" />
         <EdgeLayout
@@ -4060,26 +4060,26 @@ WHERE tiempo_key = ?
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="156.499994635582,59.9473673016904"
+              EndConnector="179.999994635582,71.9473673016904"
               Start="0,0"
-              End="156.499994635582,52.4473673016904">
+              End="179.999994635582,64.4473673016904">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9736836508452" />
+                    End="0,31.9736836508452" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.9736836508452"
-                    Point2="0,29.9736836508452"
-                    Point3="4,29.9736836508452" />
+                    Point1="0,31.9736836508452"
+                    Point2="0,35.9736836508452"
+                    Point3="4,35.9736836508452" />
                   <mssgle:LineSegment
-                    End="152.499994635582,29.9736836508452" />
+                    End="175.999994635582,35.9736836508452" />
                   <mssgle:CubicBezierSegment
-                    Point1="152.499994635582,29.9736836508452"
-                    Point2="156.499994635582,29.9736836508452"
-                    Point3="156.499994635582,33.9736836508452" />
+                    Point1="175.999994635582,35.9736836508452"
+                    Point2="179.999994635582,35.9736836508452"
+                    Point3="179.999994635582,39.9736836508452" />
                   <mssgle:LineSegment
-                    End="156.499994635582,52.4473673016904" />
+                    End="179.999994635582,64.4473673016904" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4090,30 +4090,30 @@ WHERE tiempo_key = ?
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="389.374987622723,189.789472061511">
+          TopLeft="412.874987622723,201.789472061511">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-141.499994300306,51.736841076051"
+              EndConnector="-164.999994300306,39.736841076051"
               Start="0,0"
-              End="-141.499994300306,44.236841076051">
+              End="-164.999994300306,32.236841076051">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.8684205380255" />
+                    End="0,15.8684205380255" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.8684205380255"
-                    Point2="0,25.8684205380255"
-                    Point3="-4,25.8684205380255" />
+                    Point1="0,15.8684205380255"
+                    Point2="0,19.8684205380255"
+                    Point3="-4,19.8684205380255" />
                   <mssgle:LineSegment
-                    End="-137.499994300306,25.8684205380255" />
+                    End="-160.999994300306,19.8684205380255" />
                   <mssgle:CubicBezierSegment
-                    Point1="-137.499994300306,25.8684205380255"
-                    Point2="-141.499994300306,25.8684205380255"
-                    Point3="-141.499994300306,29.8684205380255" />
+                    Point1="-160.999994300306,19.8684205380255"
+                    Point2="-164.999994300306,19.8684205380255"
+                    Point3="-164.999994300306,23.8684205380255" />
                   <mssgle:LineSegment
-                    End="-141.499994300306,44.236841076051" />
+                    End="-164.999994300306,32.236841076051" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4129,7 +4129,7 @@ WHERE tiempo_key = ?
     design-time-name="Package\Actualizar registros existentes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="132,43"
           Id="Package\Actualizar registros existentes\Merge Join"
@@ -4185,7 +4185,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4219,7 +4221,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4241,7 +4245,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4263,7 +4269,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4285,7 +4293,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4310,19 +4320,19 @@ WHERE tiempo_key = ?
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,43"
+          Size="157.333333333334,42.6666666666667"
           Id="Package\Cargar dummy\Existe el dummy?"
           TopLeft="193.12499136664,160.105261399971" />
         <NodeLayout
-          Size="175,67"
+          Size="174.666666666667,66.6666666666667"
           Id="Package\Cargar dummy\Preparar datos para registro dummy"
           TopLeft="330.763874102591,243.502921302994" />
         <NodeLayout
-          Size="175,43"
+          Size="174.666666666667,42.6666666666667"
           Id="Package\Cargar dummy\Cargar dummy"
           TopLeft="273.749987762422,344.315786198236" />
         <NodeLayout
-          Size="155,43"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Cargar dummy\Leer registro dummy"
           TopLeft="159.999992847443,82.1052622563952" />
         <EdgeLayout
@@ -4459,31 +4469,31 @@ WHERE tiempo_key = ?
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Insertar nuevos registros\OLE DB Destination"
           TopLeft="355.357126971441,431.052626846075" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Insertar nuevos registros\Flat File Source"
           TopLeft="181.999994575977,93.9999971985818" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Insertar nuevos registros\OLE DB Source"
           TopLeft="594.999982267619,97.9999970793725" />
         <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
+          Size="99,43"
           Id="Package\Insertar nuevos registros\Sort"
           TopLeft="614.999981671572,230.999993115664" />
         <NodeLayout
-          Size="108,42.6666666666667"
+          Size="108,43"
           Id="Package\Insertar nuevos registros\Sort 1"
           TopLeft="191.999994277954,198.999994069338" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157,43"
           Id="Package\Insertar nuevos registros\Conditional Split"
           TopLeft="366.071412206761,338.195485008485" />
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,43"
           Id="Package\Insertar nuevos registros\Merge Join"
           TopLeft="377.999988734723,261.999992191792" />
         <EdgeLayout
@@ -4517,7 +4527,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4551,7 +4563,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4585,7 +4599,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4631,7 +4647,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4665,7 +4683,9 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
