@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{FECE3DFF-717C-48AA-B84A-6CF3F3B295EB}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{114A59D7-3BEC-4AF5-94FB-699E37B788B3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -735,8 +735,8 @@
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\Leer DIM_Tiempo.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
+                  connectionManagerRefId="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1140,8 +1140,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
+                  connectionManagerRefId="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1928,7 +1928,7 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Cargar dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -2218,7 +2218,7 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -3120,8 +3120,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
+                  connectionManagerRefId="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3295,8 +3295,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
+                  connectionManagerRefId="{A9345036-F7EE-43E5-B855-208749227F12}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4051,7 +4051,7 @@ WHERE tiempo_key = ?
           Id="Package\Cargar dummy"
           TopLeft="156.874992987141,45.8421047598206" />
         <NodeLayout
-          Size="197.333333333334,42.6666666666667"
+          Size="197,43"
           Id="Package\Insertar nuevos registros"
           TopLeft="149.374993322417,241.526313137562" />
         <EdgeLayout
@@ -4320,19 +4320,19 @@ WHERE tiempo_key = ?
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157,43"
           Id="Package\Cargar dummy\Existe el dummy?"
           TopLeft="193.12499136664,160.105261399971" />
         <NodeLayout
-          Size="174.666666666667,66.6666666666667"
+          Size="175,67"
           Id="Package\Cargar dummy\Preparar datos para registro dummy"
           TopLeft="330.763874102591,243.502921302994" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Cargar dummy\Cargar dummy"
           TopLeft="273.749987762422,344.315786198236" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Cargar dummy\Leer registro dummy"
           TopLeft="159.999992847443,82.1052622563952" />
         <EdgeLayout

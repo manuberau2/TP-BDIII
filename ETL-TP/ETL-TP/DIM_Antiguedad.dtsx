@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{DC6E28B2-EB66-4B4A-BEA6-06CAEABC2A53}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{2FD6291B-AB4C-4C33-85C9-F10F5C5EC762}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=RecursosHumanos;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{93A556E7-F61F-4E51-ADB7-1D67F965D2A6}database-distribuidora.database.windows.net.RecursosHumanos.sqladmin;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8fJ3DDu6LfiH3qiithRfVFDWWYHX7lSSXVRpVYUoMbQAAAAAOgAAAAAIAACAAAAAJfAx9rhiJ+cyT1uV0kzkWArymdGSBc7bbnkVxXxmsDyAAAABkmM1hQuD+bdTmoUBwhAGNM7iJE8+YT/qB+99/e1fe8UAAAACwhBsj+Aes7zbZ9lSY2LvQF+L5bjT9iMX+huxDfgcqad64eqroxBA5Asq6Ar44zldJeSdM6TFHL5/lT3zotFZZ</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=RecursosHumanos;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{93A556E7-F61F-4E51-ADB7-1D67F965D2A6}database-distribuidora.database.windows.net.RecursosHumanos.sqladmin;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -109,8 +104,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Cargar dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -345,8 +340,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1482,8 +1477,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Insertar registros en DIM_antiguedad\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1579,11 +1574,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Cargar dummy"
           TopLeft="171.249992344529,70.4736834367392" />
         <NodeLayout
-          Size="256,42.6666666666667"
+          Size="256,43"
           Id="Package\Insertar registros en DIM_antiguedad"
           TopLeft="178.124992037192,214.842102904234" />
         <EdgeLayout
@@ -1629,21 +1624,55 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="155,43"
+          Id="Package\Cargar dummy\Leer registro dummy"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="157,43"
           Id="Package\Cargar dummy\Existe el dummy?"
           TopLeft="93.124998519197,137.999999143576" />
         <NodeLayout
-          Size="174.666666666667,66.6666666666667"
+          Size="175,67"
           Id="Package\Cargar dummy\Preparar datos para registro dummy"
           TopLeft="230.763881255148,221.397659046599" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Cargar dummy\Cargar dummy"
           TopLeft="173.749994914979,322.210523941841" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Cargar dummy\Leer registro dummy"
-          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package\Cargar dummy.Paths[Derived Column Output]"
+          TopLeft="318.097214588481,288.064325713266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.013886340169,34.1461982285754"
+              Start="0,0"
+              End="-57.013886340169,26.6461982285754">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.0730991142877" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.0730991142877"
+                    Point2="0,17.0730991142877"
+                    Point3="-4,17.0730991142877" />
+                  <mssgle:LineSegment
+                    End="-53.013886340169,17.0730991142877" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.013886340169,17.0730991142877"
+                    Point2="-57.013886340169,17.0730991142877"
+                    Point3="-57.013886340169,21.0730991142877" />
+                  <mssgle:LineSegment
+                    End="-57.013886340169,26.6461982285754" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Cargar dummy.Paths[OLE DB Source Output]"
           TopLeft="137.333333333333,102.666666666667">
@@ -1714,54 +1743,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar dummy.Paths[Derived Column Output]"
-          TopLeft="318.097214588481,288.064325713266">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-57.013886340169,34.1461982285754"
-              Start="0,0"
-              End="-57.013886340169,26.6461982285754">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.0730991142877" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.0730991142877"
-                    Point2="0,17.0730991142877"
-                    Point3="-4,17.0730991142877" />
-                  <mssgle:LineSegment
-                    End="-53.013886340169,17.0730991142877" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53.013886340169,17.0730991142877"
-                    Point2="-57.013886340169,17.0730991142877"
-                    Point3="-57.013886340169,21.0730991142877" />
-                  <mssgle:LineSegment
-                    End="-57.013886340169,26.6461982285754" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar dummy\Leer registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar dummy\Cargar dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Insertar registros en DIM_antiguedad">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42.6666666666667"
+          Size="184,43"
           Id="Package\Insertar registros en DIM_antiguedad\Componente de script"
           TopLeft="227.999993205071,74.9999977648258" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Insertar registros en DIM_antiguedad\OLE DB Destination"
           TopLeft="246.999992638827,286.999991446734" />
         <EdgeLayout
@@ -1801,27 +1817,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar dummy\Cargar dummy">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar dummy\Leer registro dummy">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Insertar registros en DIM_antiguedad\OLE DB Destination">
     <Properties>

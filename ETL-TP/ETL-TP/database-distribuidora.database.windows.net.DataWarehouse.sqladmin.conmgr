@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="database-distribuidora.database.windows.net.DataWarehouse.sqladmin"
-  DTS:DTSID="{A9345036-F7EE-43E5-B855-208749227F12}"
+  DTS:DTSID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}"
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-ETL-TP-{A9345036-F7EE-43E5-B855-208749227F12}database-distribuidora.database.windows.net.DataWarehouse.sqladmin;">
+      DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-ETL-TP-{ECC45ED8-81DE-4D12-8196-485CCD37A361}database-distribuidora.database.windows.net.DataWarehouse.sqladmin;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVaU1qpojBU20ZCoOnNzvTAAAAAACAAAAAAAQZgAAAAEAACAAAADF1yflQjs0so+ruufme9Gup0pFj/5PgD9DiywylkBbfQAAAAAOgAAAAAIAACAAAACMfwvNYPsthvy05y7FSs1oUoV9s3A3hJT/0fM5b5eJjIAAAADbOwqRPlMk4AFM9WtMbfsa/19VTLe9H4xYP32k5vRnnYZE5zsOnHsmIUDksbwPR0iCJEU9RLYPMboEasnDLU3tQPeI61irhDfJ0pWjo4ahlp8I84hOVKZPxDxPmpwzGnb2lZI99rHPdwOo74stE5MCbnOlHPI62tfLBrLk5BjADkAAAAC4T72VvVxGD4C/IigU9Mr0rY5NWQRrxBzg77U+7F8bRtNd0DjpGyYUCKgDd+6x2lSKHMT+FrPNlvzm9n9rKkDE</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAACAAAAAAAQZgAAAAEAACAAAACJoaFjblq/m0dQmUpm3NLMnlFBaObWaVLiBUDUMMSK1AAAAAAOgAAAAAIAACAAAABYeifEHvmGGh6p5VOh5iQkzzPMqflFtGh1vu7drkUDOoAAAAC1tssmMJKJRW9m55wR/eSCOKwuvIxtZsEBoEUKU3Wg6uC93XeTsn6B2nAEVvpkWRi4SqtHRCNRrnaGcbcNnbSH/VZZxStlI+bNARrCv8QgnzGN/h3GxXbUgvIO1hrKV4lQo220+k7CVeSa46/1HoaO8S0ct9w9bs1N5heTvhkGvkAAAAA1LnE7HycYPc8sPA7DUbTpHi/7/D/uL6UbcUP+tqsSOOnQaoSTKFrSImobttKsEGAg5Vt9NbyyxbhL3bPFfn2D</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
