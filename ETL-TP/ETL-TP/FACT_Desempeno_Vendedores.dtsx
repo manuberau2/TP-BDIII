@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/15/2025 11:44:57 AM"
@@ -11,9 +11,2448 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{9907C72F-C37A-402F-9115-C81128B39F42}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{30276071-8804-478D-9037-10ACC5F1FEA0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4AD852E6-CF29-4D0B-AD28-EF2E123A3AB8}"
+      DTS:ObjectName="database-distribuidora.database.windows.net.FacturacionVentas.sqladmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=FacturacionVentas;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{4AD852E6-CF29-4D0B-AD28-EF2E123A3AB8}database-distribuidora.database.windows.net.FacturacionVentas.sqladmin;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAXToDG6FzhGmpBVAXY2LWgFKbs3nc8mXrCiW1CNO7MUAAAAAAOgAAAAAIAACAAAAAiSMhv6oSdMay2AEx8/cTf364eHENSPaUIGnlD/6opsyAAAAAddjvjha6T2+sgEIOV5gRdb1Uir/9voWX5b6J/eZaVz0AAAADLaA1XxordDFihvJYLtWZI1xwc/gwRuTzOQbzkI30CzIQwb96FW+g2rUROPLbkAd6kkjqWRBFkEbU4dGz+ZhAg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[database-distribuidora.database.windows.net.RecursosHumanos.sqladmin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{67518047-43A6-49E1-9047-BC2C6DCCB473}"
+      DTS:ObjectName="database-distribuidora.database.windows.net.RecursosHumanos.sqladmin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=RecursosHumanos;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{67518047-43A6-49E1-9047-BC2C6DCCB473}database-distribuidora.database.windows.net.RecursosHumanos.sqladmin;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACsrZMMN6Ol7zizXvxuTE5JUfUWTfvQovhQ+vZYM6Z9iAAAAAAOgAAAAAIAACAAAABo4qXoEOFNamnDbUy+v+/vDv3FVdnjDfbdqzlXcGcbhiAAAABXEeNy1QU9FM9Zozraf2jWy1sUoM6HUidBsdprwY/jBUAAAAAk5Styz/Vm19GKZBXE46gOCkv3kH+NUhrIdp9mAgdmSKbhxS8+ol8YX2fOFmn+2u59dPDIl4wfMpVnnHMWu7/3</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Borrar FACT_Desempeno_Vendedores"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{5D42BAAE-1732-4B99-9125-A1C9B7FFBF2F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Borrar FACT_Desempeno_Vendedores"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{376D378C-4890-46DA-B14E-A8378E16E14B}"
+          SQLTask:SqlStatementSource="DELETE FROM DIM_desempeno_vendedores WHERE tiempo_key &gt; 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Cargar FACT_Desempeno_Vendedores"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D612EF2D-46DA-4832-A32D-4A083CB065D2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Cargar FACT_Desempeno_Vendedores"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Inputs[Aggregate Input 1].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[legajo]" />
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Inputs[Aggregate Input 1].Columns[duracion_horas]"
+                      cachedDataType="i4"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[duracion_horas]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]"
+                      name="legajo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[legajo]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]"
+                      dataType="i8"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]"
+                      name="duracion_horas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[duracion_horas]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-0-10-horas]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="rango-0-10-horas"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 10</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">duracion_horas &lt;= 10</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-10-20-horas]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="rango-10-20-horas"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 10 &amp;&amp; #{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 20</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">duracion_horas &lt;= 10 &amp;&amp; duracion_horas &lt;= 20</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-20-30-horas]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="rango-20-30-horas"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 20 &amp;&amp; #{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 30</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">duracion_horas &lt;= 20 &amp;&amp; duracion_horas &lt;= 30</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-30-40-horas]"
+                  description="Output 4 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="rango-30-40-horas"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 30 &amp;&amp; #{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 40</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">duracion_horas &lt;= 30 &amp;&amp; duracion_horas &lt;= 40</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">3</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-40-50-horas]"
+                  description="Output 5 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="rango-40-50-horas"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 40 &amp;&amp; #{Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]} &lt;= 50</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">duracion_horas &lt;= 40 &amp;&amp; duracion_horas &lt;= 50</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">4</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      name="franja_horaria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)"0-10 horas"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)"0-10 horas"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      name="franja_horaria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)"10-20 horas"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)"10-20 horas"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      name="franja_horaria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)"20-30 horas"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)"20-30 horas"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 3"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      name="franja_horaria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)"30-40 horas"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)"30-40 horas"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 4"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Output].Columns[franja_horaria]"
+                      name="franja_horaria"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)"40-50 horas"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)"40-50 horas"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 5"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Leer FacturacionVentas"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+    F.factura,
+    F.fecha,
+    A.id_producto,
+    V.id_vendedor,
+    Z.nom_zona,
+    P.nom_provincia,
+    D.nom_depto,
+    C.nom_ciudad,
+    RF.unidades,
+    RF.importe
+FROM Facturas F
+JOIN RegistrosFacturas RF ON F.factura = RF.factura
+JOIN Articulos A ON RF.articulo = A.id_articulo
+JOIN Vendedores V ON F.vendedor = V.id_vendedor
+JOIN Clientes Cl ON F.cliente = Cl.id_cliente
+JOIN Ciudades C ON Cl.ciudad = C.id_ciudad
+JOIN Departamentos D ON Cl.departamento = D.id_depto
+JOIN Provincia P ON Cl.provincia = P.id_provincia
+JOIN Zona Z ON P.id_zona = Z.id_zona</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[factura]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[factura]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[factura]"
+                      name="factura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[fecha]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[fecha]"
+                      name="fecha"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[id_producto]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[id_producto]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[id_producto]"
+                      name="id_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[id_vendedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[id_vendedor]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[id_vendedor]"
+                      name="id_vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_zona]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_zona]"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_zona]"
+                      name="nom_zona"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_provincia]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_provincia]"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_provincia]"
+                      name="nom_provincia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_depto]"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_depto]"
+                      name="nom_depto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_ciudad]"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[nom_ciudad]"
+                      name="nom_ciudad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[unidades]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[unidades]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[unidades]"
+                      name="unidades"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[importe]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[importe]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].Columns[importe]"
+                      name="importe"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[factura]"
+                      dataType="i4"
+                      name="factura" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                      dataType="dbDate"
+                      name="fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[id_producto]"
+                      dataType="i4"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[id_vendedor]"
+                      dataType="i4"
+                      name="id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_zona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nom_zona" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_provincia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nom_provincia" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nom_depto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nom_ciudad" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[unidades]"
+                      dataType="i4"
+                      name="unidades" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Output].ExternalColumns[importe]"
+                      dataType="numeric"
+                      name="importe"
+                      precision="18"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[factura]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[factura]"
+                      name="factura" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                      name="fecha" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[id_producto]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[id_producto]"
+                      name="id_producto" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[id_vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[id_vendedor]"
+                      name="id_vendedor" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_zona]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_zona]"
+                      name="nom_zona" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_provincia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_provincia]"
+                      name="nom_provincia" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_depto]"
+                      name="nom_depto" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[nom_ciudad]"
+                      name="nom_ciudad" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[unidades]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[unidades]"
+                      name="unidades" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[importe]"
+                      dataType="numeric"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[importe]"
+                      name="importe"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Leer RecursosHumanos"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+    E.legajo,
+    E.fecha_ingreso,
+    E.sueldo,
+    CXE.id_capacitacion,
+    C.duracion_horas
+FROM Empleado E
+LEFT JOIN CapacitacionXEmpleado CXE ON E.legajo = CXE.legajo
+LEFT JOIN Capacitacion C ON CXE.id_capacitacion = C.id_capacitacion</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[database-distribuidora.database.windows.net.RecursosHumanos.sqladmin]"
+                  connectionManagerRefId="Package.ConnectionManagers[database-distribuidora.database.windows.net.RecursosHumanos.sqladmin]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[legajo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[legajo]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[legajo]"
+                      name="legajo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[fecha_ingreso]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[fecha_ingreso]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[fecha_ingreso]"
+                      name="fecha_ingreso"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[sueldo]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[sueldo]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[sueldo]"
+                      name="sueldo"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[id_capacitacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[id_capacitacion]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[id_capacitacion]"
+                      name="id_capacitacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[duracion_horas]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[duracion_horas]"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].Columns[duracion_horas]"
+                      name="duracion_horas"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[legajo]"
+                      dataType="i4"
+                      name="legajo" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[fecha_ingreso]"
+                      dataType="dbDate"
+                      name="fecha_ingreso" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[sueldo]"
+                      dataType="numeric"
+                      name="sueldo"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[id_capacitacion]"
+                      dataType="i4"
+                      name="id_capacitacion" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output].ExternalColumns[duracion_horas]"
+                      dataType="i4"
+                      name="duracion_horas" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[legajo]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[legajo]"
+                      name="legajo" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[fecha_ingreso]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[fecha_ingreso]"
+                      name="fecha_ingreso" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[sueldo]"
+                      dataType="numeric"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[sueldo]"
+                      name="sueldo"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[id_capacitacion]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[id_capacitacion]"
+                      name="id_capacitacion" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[duracion_horas]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[duracion_horas]"
+                      name="duracion_horas" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DIM_capacitacion]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DIM_capacitacion]) [refTable]
+where [refTable].[franja_horaria] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="capacitacion_key" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="franja_horaria" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">franja_horaria</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Match Output].Columns[capacitacion_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Match Output].Columns[capacitacion_key]"
+                      name="capacitacion_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">capacitacion_key</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar FACT_Desempeno_Vendedores\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 1].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 1].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 1].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Output].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 2].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 2].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 2].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Output].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 3].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 3].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 3].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Output].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 4].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 4].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 4].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Output].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 5]"
+                  hasSideEffects="true"
+                  name="Union All Input 5">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 5].Columns[legajo]"
+                      cachedDataType="i4"
+                      cachedName="legajo"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[legajo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 5].Columns[duracion_horas]"
+                      cachedDataType="i8"
+                      cachedName="duracion_horas"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1].Columns[duracion_horas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 5].Columns[franja_horaria]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="franja_horaria"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Output].Columns[franja_horaria]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 6]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 6">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]"
+                      dataType="i4"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[legajo]"
+                      name="legajo" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]"
+                      dataType="i8"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[duracion_horas]"
+                      name="duracion_horas" />
+                    <outputColumn
+                      refId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1].Columns[franja_horaria]"
+                      name="franja_horaria" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Aggregate Output 1]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Inputs[Conditional Split Input]"
+              name="Aggregate Output 1"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output1]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output2]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output3]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output4]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Inputs[Union All Input 5]"
+              name="Derived Column Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Lookup Match Output]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[OLE DB Source Output]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Aggregate.Inputs[Aggregate Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-0-10-horas]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column.Inputs[Derived Column Input]"
+              name="rango-0-10-horas"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-0-10-horas]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-10-20-horas]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1.Inputs[Derived Column Input]"
+              name="rango-10-20-horas"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-10-20-horas]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-20-30-horas]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2.Inputs[Derived Column Input]"
+              name="rango-20-30-horas"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-20-30-horas]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-30-40-horas]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3.Inputs[Derived Column Input]"
+              name="rango-30-40-horas"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-30-40-horas]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-40-50-horas]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4.Inputs[Derived Column Input]"
+              name="rango-40-50-horas"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split.Outputs[rango-40-50-horas]" />
+            <path
+              refId="Package\Cargar FACT_Desempeno_Vendedores.Paths[Union All Output 1]"
+              endId="Package\Cargar FACT_Desempeno_Vendedores\Lookup.Inputs[Lookup Input]"
+              name="Union All Output 1"
+              startId="Package\Cargar FACT_Desempeno_Vendedores\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{EF141BCF-6B17-42BF-B335-561CCA04AC06}"
+      DTS:From="Package\Borrar FACT_Desempeno_Vendedores"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Cargar FACT_Desempeno_Vendedores" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="269.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores"
+          TopLeft="148.124993378297,171.052629700823" />
+        <NodeLayout
+          Size="266.666666666667,42.6666666666667"
+          Id="Package\Borrar FACT_Desempeno_Vendedores"
+          TopLeft="141.874993657694,76.6315781059688" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="278.999993517995,119.298244772636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.7543849281878"
+              Start="0,0"
+              End="0,44.2543849281878">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2543849281878" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Cargar FACT_Desempeno_Vendedores">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="179.333333333334,57.3333333333334"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas"
+          TopLeft="89.3749960046263,42.4210521658042" />
+        <NodeLayout
+          Size="176,52.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos"
+          TopLeft="374.999983236194,47.8947363162305" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Aggregate"
+          TopLeft="391.874982481823,169.684208663217" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[OLE DB Source Output]"
+          TopLeft="459.770816192342,100.561402982897">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.1228056803195"
+              Start="0,0"
+              End="0,61.6228056803195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.6228056803195" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Conditional Split"
+          TopLeft="381.249982956798,272.315786483711" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Aggregate Output 1]"
+          TopLeft="458.229149385977,212.350875329883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9649111538274"
+              Start="0,0"
+              End="0,52.4649111538274">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4649111538274" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column"
+          TopLeft="44.9999979883434,367.323304237539" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 1"
+          TopLeft="302.499986477197,374.751875584547" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 2"
+          TopLeft="550.892832516028,379.248116136682" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 3"
+          TopLeft="794.285678778377,387.458642362322" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 4"
+          TopLeft="983.904720075075,384.255634910064" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-0-10-horas]"
+          TopLeft="410.138871845686,314.982453150377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-287.138873857343,52.340851087162"
+              Start="0,0"
+              End="-287.138873857343,44.840851087162">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.0584930606014" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.0584930606014"
+                    Point2="0,14.0584930606014"
+                    Point3="-4,14.0584930606014" />
+                  <mssgle:LineSegment
+                    End="-283.138873857343,14.0584930606014" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-283.138873857343,14.0584930606014"
+                    Point2="-287.138873857343,14.0584930606014"
+                    Point3="-287.138873857343,18.0584930606014" />
+                  <mssgle:LineSegment
+                    End="-287.138873857343,44.840851087162" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-182.636969480755,19.0584930606014,78.1350651041667,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-10-20-horas]"
+          TopLeft="435.027760734575,314.982453150377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-49.8611075907119,59.7694224341691"
+              Start="0,0"
+              End="-49.8611075907119,52.2694224341691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2687923306526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2687923306526"
+                    Point2="0,24.2687923306526"
+                    Point3="-4,24.2687923306526" />
+                  <mssgle:LineSegment
+                    End="-45.8611075907119,24.2687923306526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-45.8611075907119,24.2687923306526"
+                    Point2="-49.8611075907119,24.2687923306526"
+                    Point3="-49.8611075907119,28.2687923306526" />
+                  <mssgle:LineSegment
+                    End="-49.8611075907119,52.2694224341691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.7280863474393,29.2687923306526,83.5950651041667,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-20-30-horas]"
+          TopLeft="484.805538512353,314.982453150377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.753960670342,64.265662986305"
+              Start="0,0"
+              End="148.753960670342,56.765662986305">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0944470514863" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.0944470514863"
+                    Point2="0,26.0944470514863"
+                    Point3="4,26.0944470514863" />
+                  <mssgle:LineSegment
+                    End="144.753960670342,26.0944470514863" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.753960670342,26.0944470514863"
+                    Point2="148.753960670342,26.0944470514863"
+                    Point3="148.753960670342,30.0944470514863" />
+                  <mssgle:LineSegment
+                    End="148.753960670342,56.765662986305" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="32.5794477830875,31.0944470514863,83.5950651041667,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-30-40-horas]"
+          TopLeft="497.249982956798,314.982453150377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="379.702362488246,72.4761892119445"
+              Start="0,0"
+              End="379.702362488246,64.9761892119445">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9640207285587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9640207285587"
+                    Point2="0,24.9640207285587"
+                    Point3="4,24.9640207285587" />
+                  <mssgle:LineSegment
+                    End="375.702362488246,24.9640207285587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="375.702362488246,24.9640207285587"
+                    Point2="379.702362488246,24.9640207285587"
+                    Point3="379.702362488246,28.9640207285587" />
+                  <mssgle:LineSegment
+                    End="379.702362488246,64.9761892119445" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="148.05364869204,29.9640207285587,83.5950651041667,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[rango-40-50-horas]"
+          TopLeft="504.716649623464,314.982453150377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="561.854737118277,69.2731817596869"
+              Start="0,0"
+              End="561.854737118277,61.7731817596869">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8476163115645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8476163115645"
+                    Point2="0,20.8476163115645"
+                    Point3="4,20.8476163115645" />
+                  <mssgle:LineSegment
+                    End="557.854737118277,20.8476163115645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="557.854737118277,20.8476163115645"
+                    Point2="561.854737118277,20.8476163115645"
+                    Point3="561.854737118277,24.8476163115645" />
+                  <mssgle:LineSegment
+                    End="561.854737118277,61.7731817596869" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="239.129836007055,25.8476163115645,83.5950651041667,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="122.666666666667,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Union All"
+          TopLeft="473.452361234952,462.380947691008" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output]"
+          TopLeft="122.999997988343,409.989970904206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="373.56347435772,52.390976786802"
+              Start="0,0"
+              End="373.56347435772,44.890976786802">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.0523936662036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.0523936662036"
+                    Point2="0,38.0523936662036"
+                    Point3="4,38.0523936662036" />
+                  <mssgle:LineSegment
+                    End="369.56347435772,38.0523936662036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="369.56347435772,38.0523936662036"
+                    Point2="373.56347435772,38.0523936662036"
+                    Point3="373.56347435772,42.0523936662036" />
+                  <mssgle:LineSegment
+                    End="373.56347435772,44.890976786802" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output1]"
+          TopLeft="385.166653143863,417.418542251213">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.507930313311,44.9624054397949"
+              Start="0,0"
+              End="130.507930313311,37.4624054397949">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6300942089772" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6300942089772"
+                    Point2="0,26.6300942089772"
+                    Point3="4,26.6300942089772" />
+                  <mssgle:LineSegment
+                    End="126.507930313311,26.6300942089772" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.507930313311,26.6300942089772"
+                    Point2="130.507930313311,26.6300942089772"
+                    Point3="130.507930313311,30.6300942089772" />
+                  <mssgle:LineSegment
+                    End="130.507930313311,37.4624054397949" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output2]"
+          TopLeft="633.559499182695,421.914782803349">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-70.1071379477426,40.4661648876591"
+              Start="0,0"
+              End="-70.1071379477426,32.9661648876591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.4034551040045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.4034551040045"
+                    Point2="0,26.4034551040045"
+                    Point3="-4,26.4034551040045" />
+                  <mssgle:LineSegment
+                    End="-66.1071379477426,26.4034551040045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.1071379477426,26.4034551040045"
+                    Point2="-70.1071379477426,26.4034551040045"
+                    Point3="-70.1071379477426,30.4034551040045" />
+                  <mssgle:LineSegment
+                    End="-70.1071379477426,32.9661648876591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output3]"
+          TopLeft="876.952345445044,430.125309028989">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-303.944428654536,32.2556386620195"
+              Start="0,0"
+              End="-303.944428654536,24.7556386620195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4277796597826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4277796597826"
+                    Point2="0,23.4277796597826"
+                    Point3="-4,23.4277796597826" />
+                  <mssgle:LineSegment
+                    End="-299.944428654536,23.4277796597826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-299.944428654536,23.4277796597826"
+                    Point2="-303.944428654536,23.4277796597826"
+                    Point3="-303.944428654536,27.4277796597826" />
+                  <mssgle:LineSegment
+                    End="-303.944428654536,24.7556386620195" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Derived Column Output4]"
+          TopLeft="1066.57138674174,426.922301576731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-493.563469951234,35.4586461142771"
+              Start="0,0"
+              End="-493.563469951234,27.9586461142771">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.7541745461592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.7541745461592"
+                    Point2="0,25.7541745461592"
+                    Point3="-4,25.7541745461592" />
+                  <mssgle:LineSegment
+                    End="-489.563469951234,25.7541745461592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-489.563469951234,25.7541745461592"
+                    Point2="-493.563469951234,25.7541745461592"
+                    Point3="-493.563469951234,29.7541745461592" />
+                  <mssgle:LineSegment
+                    End="-493.563469951234,27.9586461142771" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="114.666666666667,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Lookup"
+          TopLeft="480.595218058499,541.979945356457" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Union All Output 1]"
+          TopLeft="536.357122980059,505.047614357675">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9323309987819"
+              Start="0,0"
+              End="0,29.4323309987819">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4323309987819" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Cargar FACT_Desempeno_Vendedores\Derived Column 5"
+          TopLeft="449.999979883433,626.052624705013" />
+        <EdgeLayout
+          Id="Package\Cargar FACT_Desempeno_Vendedores.Paths[Lookup Match Output]"
+          TopLeft="535.297598970966,584.646612023123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.4060126818898"
+              Start="0,0"
+              End="0,33.9060126818898">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.9060126818898" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,11.1483188409449,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar FACT_Desempeno_Vendedores\Leer FacturacionVentas">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar FACT_Desempeno_Vendedores\Leer RecursosHumanos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar FACT_Desempeno_Vendedores\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DIM_capacitacion]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

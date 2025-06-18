@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{FECE3DFF-717C-48AA-B84A-6CF3F3B295EB}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{DCC1CE99-F0C8-415C-9E92-86759C18F88C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -268,6 +268,84 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3EF7D292-1F51-4D35-877B-40F1B27D3AFD}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="11274"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Escritorio\Repo-BDD\TP-BDIII\BDD\BDD\dim_tiempo_t.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tiempo_key"
+              DTS:DTSID="{28B28B38-D8D8-466C-A6EA-F7267FB987C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fecha"
+              DTS:DTSID="{3B707E74-CDA2-4594-A626-517D8A9EC292}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="mes"
+              DTS:DTSID="{2F8E5174-2968-4AD6-9799-6ADB94419C60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="anio"
+              DTS:DTSID="{38575199-A166-446A-97A2-4DAFEA8C8B3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="mes_nombre"
+              DTS:DTSID="{25973342-DC25-40C1-AD49-53E23125F5C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dia"
+              DTS:DTSID="{29378EA1-6F88-4ED3-AEDD-04AB0B4CAC52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dia_nombre"
+              DTS:DTSID="{EA651476-21DD-46CC-B680-7962577EFB6B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[definitive_time]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{FC37C891-1348-4163-A2E3-99429AA585EB}"
@@ -463,8 +541,8 @@
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\Leer archivo tiempo.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[definitive_time]"
-                  connectionManagerRefId="Package.ConnectionManagers[definitive_time]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 3]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -626,32 +704,31 @@
                       name="tiempo_key" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[fecha]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="date"
                       name="fecha" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[mes]"
-                      dataType="i4"
+                      dataType="i1"
                       name="mes" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[anio]"
-                      dataType="i4"
+                      dataType="i2"
                       name="anio" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[mes_nombre]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="7"
                       name="mes_nombre" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[dia]"
-                      dataType="i4"
+                      dataType="i1"
                       name="dia" />
                     <externalMetadataColumn
                       refId="Package\Actualizar registros existentes\Leer archivo tiempo.Outputs[Flat File Source Output].ExternalColumns[dia_nombre]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="9"
                       name="dia_nombre" />
                   </externalMetadataColumns>
                 </output>
@@ -735,8 +812,8 @@
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\Leer DIM_Tiempo.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1140,8 +1217,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1928,8 +2005,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Cargar dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2218,8 +2295,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2628,8 +2705,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[definitive_time]"
-                  connectionManagerRefId="Package.ConnectionManagers[definitive_time]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones de archivos planos 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 3]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -2791,32 +2868,31 @@ WHERE tiempo_key = ?
                       name="tiempo_key" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fecha]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="date"
                       name="fecha" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mes]"
-                      dataType="i4"
+                      dataType="i1"
                       name="mes" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[anio]"
-                      dataType="i4"
+                      dataType="i2"
                       name="anio" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mes_nombre]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="7"
                       name="mes_nombre" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dia]"
-                      dataType="i4"
+                      dataType="i1"
                       name="dia" />
                     <externalMetadataColumn
                       refId="Package\Insertar nuevos registros\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dia_nombre]"
                       codePage="1252"
                       dataType="str"
-                      length="20"
+                      length="9"
                       name="dia_nombre" />
                   </externalMetadataColumns>
                 </output>
@@ -3120,8 +3196,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3295,8 +3371,8 @@ WHERE tiempo_key = ?
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
+                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4129,29 +4205,29 @@ WHERE tiempo_key = ?
     design-time-name="Package\Actualizar registros existentes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,43"
+          Size="132,42.6666666666667"
           Id="Package\Actualizar registros existentes\Merge Join"
           TopLeft="383.928554265627,299.022553546961" />
         <NodeLayout
-          Size="108,43"
+          Size="108,42.6666666666667"
           Id="Package\Actualizar registros existentes\Sort 1"
           TopLeft="558.928546442518,199.323306521338" />
         <NodeLayout
-          Size="155,43"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Actualizar registros existentes\Leer DIM_Tiempo"
           TopLeft="223.142850758775,116.203003890096" />
         <NodeLayout
-          Size="171,43"
+          Size="170.666666666667,42.6666666666667"
           Id="Package\Actualizar registros existentes\OLE DB Command"
           TopLeft="357.035704270538,397.676679295893" />
         <NodeLayout
-          Size="155,43"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Actualizar registros existentes\Leer archivo tiempo"
           TopLeft="541.964261486595,116.240600666653" />
         <NodeLayout
-          Size="99,43"
+          Size="98.6666666666667,42.6666666666667"
           Id="Package\Actualizar registros existentes\Sort"
           TopLeft="250.892845927073,210.075186102533" />
         <EdgeLayout
@@ -4185,9 +4261,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4221,9 +4295,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4245,9 +4317,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4269,9 +4339,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4293,9 +4361,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4469,31 +4535,31 @@ WHERE tiempo_key = ?
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="175,43"
+          Size="174.666666666667,42.6666666666667"
           Id="Package\Insertar nuevos registros\OLE DB Destination"
           TopLeft="355.357126971441,431.052626846075" />
         <NodeLayout
-          Size="155,43"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Insertar nuevos registros\Flat File Source"
           TopLeft="181.999994575977,93.9999971985818" />
         <NodeLayout
-          Size="155,43"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Insertar nuevos registros\OLE DB Source"
           TopLeft="594.999982267619,97.9999970793725" />
         <NodeLayout
-          Size="99,43"
+          Size="98.6666666666667,42.6666666666667"
           Id="Package\Insertar nuevos registros\Sort"
           TopLeft="614.999981671572,230.999993115664" />
         <NodeLayout
-          Size="108,43"
+          Size="108,42.6666666666667"
           Id="Package\Insertar nuevos registros\Sort 1"
           TopLeft="191.999994277954,198.999994069338" />
         <NodeLayout
-          Size="157,43"
+          Size="157.333333333334,42.6666666666667"
           Id="Package\Insertar nuevos registros\Conditional Split"
           TopLeft="366.071412206761,338.195485008485" />
         <NodeLayout
-          Size="132,43"
+          Size="132,42.6666666666667"
           Id="Package\Insertar nuevos registros\Merge Join"
           TopLeft="377.999988734723,261.999992191792" />
         <EdgeLayout
@@ -4527,9 +4593,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4563,9 +4627,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4599,9 +4661,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4647,9 +4707,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4683,9 +4741,7 @@ WHERE tiempo_key = ?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
