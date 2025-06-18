@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{25F67AA7-CDA0-4093-9812-3EF1EE2DCE42}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{B912F9CC-814F-4E84-BA26-AEF735FEFF84}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -90,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Cargar dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -326,8 +326,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1459,8 +1459,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Insertar registros en DIM_capacitacion\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1556,11 +1556,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Cargar dummy"
           TopLeft="60,60" />
         <NodeLayout
-          Size="256,42.6666666666667"
+          Size="256,43"
           Id="Package\Insertar registros en DIM_capacitacion"
           TopLeft="66.8749996926636,204.368419467495" />
         <EdgeLayout
@@ -1606,55 +1606,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Cargar dummy\Leer registro dummy"
           TopLeft="60,60" />
         <NodeLayout
-          Size="174.666666666667,66.6666666666667"
+          Size="157,43"
+          Id="Package\Cargar dummy\Existe el dummy?"
+          TopLeft="93.124998519197,137.999999143576" />
+        <NodeLayout
+          Size="175,67"
           Id="Package\Cargar dummy\Preparar datos para registro dummy"
           TopLeft="230.763881255148,221.397659046599" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Cargar dummy\Cargar dummy"
           TopLeft="173.749994914979,322.210523941841" />
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Cargar dummy\Existe el dummy?"
-          TopLeft="93.124998519197,137.999999143576" />
         <EdgeLayout
-          Id="Package\Cargar dummy.Paths[No existe]"
-          TopLeft="171.791665185864,180.666665810242">
+          Id="Package\Cargar dummy.Paths[Derived Column Output]"
+          TopLeft="318.097214588481,288.064325713266">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="146.638882735951,40.7309932363568"
+              EndConnector="-57.013886340169,34.1461982285754"
               Start="0,0"
-              End="146.638882735951,33.2309932363568">
+              End="-57.013886340169,26.6461982285754">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.3654966181784" />
+                    End="0,13.0730991142877" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.3654966181784"
-                    Point2="0,20.3654966181784"
-                    Point3="4,20.3654966181784" />
+                    Point1="0,13.0730991142877"
+                    Point2="0,17.0730991142877"
+                    Point3="-4,17.0730991142877" />
                   <mssgle:LineSegment
-                    End="142.638882735951,20.3654966181784" />
+                    End="-53.013886340169,17.0730991142877" />
                   <mssgle:CubicBezierSegment
-                    Point1="142.638882735951,20.3654966181784"
-                    Point2="146.638882735951,20.3654966181784"
-                    Point3="146.638882735951,24.3654966181784" />
+                    Point1="-53.013886340169,17.0730991142877"
+                    Point2="-57.013886340169,17.0730991142877"
+                    Point3="-57.013886340169,21.0730991142877" />
                   <mssgle:LineSegment
-                    End="146.638882735951,33.2309932363568" />
+                    End="-57.013886340169,26.6461982285754" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="52.4230937117255,25.3654966181784,41.7926953125,9.470703125"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1692,37 +1690,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar dummy.Paths[Derived Column Output]"
-          TopLeft="318.097214588481,288.064325713266">
+          Id="Package\Cargar dummy.Paths[No existe]"
+          TopLeft="171.791665185864,180.666665810242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-57.013886340169,34.1461982285754"
+              EndConnector="146.638882735951,40.7309932363568"
               Start="0,0"
-              End="-57.013886340169,26.6461982285754">
+              End="146.638882735951,33.2309932363568">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.0730991142877" />
+                    End="0,16.3654966181784" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.0730991142877"
-                    Point2="0,17.0730991142877"
-                    Point3="-4,17.0730991142877" />
+                    Point1="0,16.3654966181784"
+                    Point2="0,20.3654966181784"
+                    Point3="4,20.3654966181784" />
                   <mssgle:LineSegment
-                    End="-53.013886340169,17.0730991142877" />
+                    End="142.638882735951,20.3654966181784" />
                   <mssgle:CubicBezierSegment
-                    Point1="-53.013886340169,17.0730991142877"
-                    Point2="-57.013886340169,17.0730991142877"
-                    Point3="-57.013886340169,21.0730991142877" />
+                    Point1="142.638882735951,20.3654966181784"
+                    Point2="146.638882735951,20.3654966181784"
+                    Point3="146.638882735951,24.3654966181784" />
                   <mssgle:LineSegment
-                    End="-57.013886340169,26.6461982285754" />
+                    End="146.638882735951,33.2309932363568" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="52.4230937117255,25.3654966181784,41.7926953125,9.470703125"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1755,11 +1755,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42.6666666666667"
+          Size="184,43"
           Id="Package\Insertar registros en DIM_capacitacion\Componente de script"
           TopLeft="303.999990940094,104.999996870756" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Insertar registros en DIM_capacitacion\OLE DB Destination"
           TopLeft="293.999991238117,239.999992847443" />
         <EdgeLayout

@@ -41,7 +41,7 @@ CREATE TABLE DIM_antiguedad (
 );
 
 CREATE TABLE DIM_capacitacion (
-    capacitacion_key INT PRIMARY KEY,
+    capacitacion_key INT IDENTITY(1,1) PRIMARY KEY,
     franja_horaria   VARCHAR(50)
 );
 

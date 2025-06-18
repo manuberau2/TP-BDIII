@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{31E5C324-CEEC-437C-9BA2-62F2C7855395}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{2A4A9BD7-A85D-463D-9F07-DBEF8905AA37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=FacturacionVentas;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{DEB19F34-E1F1-4E7E-9E91-04A3D1EC196A}database-distribuidora.database.windows.net.FacturacionVentas.sqladmin;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdOhgLBb5dEq3N9rh4gCwWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD24ZWZ5xg+YZYSGID2xOvJCbysL6oZrvWy2d5wCT/RfAAAAAAOgAAAAAIAACAAAABAXs9ycQtfp1vYAsTwGocE7XywbL9axB1n9m24AMoUDiAAAABTsoHufItGwvQPDsJjOPJzoVWSwPBQjuUXoqPPaBxuoUAAAAACd1A8W0/aXG3bJjM5H3u36dsxMlN3UylR3xDg+Ez58SlF28mSFkgkgUKSz8xhsYY5aG+//LBethDsahbUNsG6</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=FacturacionVentas;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{DEB19F34-E1F1-4E7E-9E91-04A3D1EC196A}database-distribuidora.database.windows.net.FacturacionVentas.sqladmin;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -101,8 +96,8 @@
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\Leer DIM_Producto.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -287,8 +282,8 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\Leer operacional.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
-                  connectionManagerRefId="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
+                  connectionManagerID="{46B2BFD6-4778-4E3A-BC63-43D243BD839A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin1 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -590,8 +585,8 @@ WHERE producto_key = ?</property>
               <connections>
                 <connection
                   refId="Package\Actualizar registros existentes\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1160,8 +1155,8 @@ WHERE producto_key = ?</property>
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Cargar dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1424,8 +1419,8 @@ WHERE producto_key = ?</property>
               <connections>
                 <connection
                   refId="Package\Cargar dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1807,8 +1802,8 @@ WHERE producto_key = ?</property>
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Insertar en DIM_Producto.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1955,8 +1950,8 @@ WHERE producto_key = ?</property>
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Leer DIM_Producto.Connections[OleDbConnection]"
-                  connectionManagerID="{376D378C-4890-46DA-B14E-A8378E16E14B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2141,8 +2136,8 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Leer operacional.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
-                  connectionManagerRefId="Package.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin]"
+                  connectionManagerID="{46B2BFD6-4778-4E3A-BC63-43D243BD839A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.FacturacionVentas.sqladmin1 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2838,7 +2833,7 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
           Id="Package\Cargar dummy"
           TopLeft="67.499999664724,60" />
         <NodeLayout
-          Size="197.333333333334,42.6666666666667"
+          Size="197,43"
           Id="Package\Insertar nuevos registros"
           TopLeft="60,255.684208377741" />
         <EdgeLayout
@@ -2918,27 +2913,55 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="99,43"
+          Id="Package\Actualizar registros existentes\Sort"
+          TopLeft="249.99999254942,211.666661212842" />
+        <NodeLayout
+          Size="155,43"
+          Id="Package\Actualizar registros existentes\Leer operacional"
+          TopLeft="538.999983936549,114.666664103667" />
+        <NodeLayout
+          Size="171,43"
+          Id="Package\Actualizar registros existentes\OLE DB Command"
+          TopLeft="358.999989300967,405.999987900257" />
+        <NodeLayout
+          Size="132,43"
+          Id="Package\Actualizar registros existentes\Merge Join"
+          TopLeft="378.99998870492,312.666658202807" />
+        <NodeLayout
+          Size="155,43"
           Id="Package\Actualizar registros existentes\Leer DIM_Producto"
           TopLeft="223.142850758775,116.203003890096" />
         <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Actualizar registros existentes\Sort"
-          TopLeft="249.99999254942,211.666661212842" />
+          Size="108,43"
+          Id="Package\Actualizar registros existentes\Sort 1"
+          TopLeft="544.999983757735,217.666661034028" />
         <EdgeLayout
-          Id="Package\Actualizar registros existentes.Paths[OLE DB Source Output]"
-          TopLeft="299.904754987431,158.869670556763">
+          Id="Package\Actualizar registros existentes.Paths[Sort Output]"
+          TopLeft="299.333325882753,254.333327879509">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.7969906560792"
+              EndConnector="145.666662822167,58.3333303232988"
               Start="0,0"
-              End="0,45.2969906560792">
+              End="145.666662822167,50.8333303232988">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.2969906560792" />
+                    End="0,25.1666651616494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.1666651616494"
+                    Point2="0,29.1666651616494"
+                    Point3="4,29.1666651616494" />
+                  <mssgle:LineSegment
+                    End="141.666662822167,29.1666651616494" />
+                  <mssgle:CubicBezierSegment
+                    Point1="141.666662822167,29.1666651616494"
+                    Point2="145.666662822167,29.1666651616494"
+                    Point3="145.666662822167,33.1666651616494" />
+                  <mssgle:LineSegment
+                    End="145.666662822167,50.8333303232988" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2947,14 +2970,6 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Actualizar registros existentes\Leer operacional"
-          TopLeft="538.999983936549,114.666664103667" />
-        <NodeLayout
-          Size="108,42.6666666666667"
-          Id="Package\Actualizar registros existentes\Sort 1"
-          TopLeft="544.999983757735,217.666661034028" />
         <EdgeLayout
           Id="Package\Actualizar registros existentes.Paths[OLE DB Source Output1]"
           TopLeft="616.333317269882,157.333330770334">
@@ -2989,36 +3004,42 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Actualizar registros existentes\Merge Join"
-          TopLeft="378.99998870492,312.666658202807" />
         <EdgeLayout
-          Id="Package\Actualizar registros existentes.Paths[Sort Output]"
-          TopLeft="299.333325882753,254.333327879509">
+          Id="Package\Actualizar registros existentes.Paths[OLE DB Source Output]"
+          TopLeft="299.904754987431,158.869670556763">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="145.666662822167,58.3333303232988"
+              EndConnector="0,52.7969906560792"
               Start="0,0"
-              End="145.666662822167,50.8333303232988">
+              End="0,45.2969906560792">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.1666651616494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.1666651616494"
-                    Point2="0,29.1666651616494"
-                    Point3="4,29.1666651616494" />
+                    End="0,45.2969906560792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Actualizar registros existentes.Paths[Merge Join Output]"
+          TopLeft="444.66665566961,355.333324869474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.6666630307834"
+              Start="0,0"
+              End="0,43.1666630307834">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="141.666662822167,29.1666651616494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="141.666662822167,29.1666651616494"
-                    Point2="145.666662822167,29.1666651616494"
-                    Point3="145.666662822167,33.1666651616494" />
-                  <mssgle:LineSegment
-                    End="145.666662822167,50.8333303232988" />
+                    End="0,43.1666630307834" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3061,35 +3082,17 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.666666666667,42.6666666666667"
-          Id="Package\Actualizar registros existentes\OLE DB Command"
-          TopLeft="358.999989300967,405.999987900257" />
-        <EdgeLayout
-          Id="Package\Actualizar registros existentes.Paths[Merge Join Output]"
-          TopLeft="444.66665566961,355.333324869474">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.6666630307834"
-              Start="0,0"
-              End="0,43.1666630307834">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.1666630307834" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Actualizar registros existentes\Leer operacional">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Actualizar registros existentes\Leer DIM_Producto">
     <Properties>
@@ -3109,53 +3112,55 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157,43"
           Id="Package\Cargar dummy\Existe el dummy?"
           TopLeft="193.12499136664,160.105261399971" />
         <NodeLayout
-          Size="174.666666666667,66.6666666666667"
+          Size="175,67"
           Id="Package\Cargar dummy\Preparar datos para registro dummy"
           TopLeft="330.763874102591,243.502921302994" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="175,43"
           Id="Package\Cargar dummy\Cargar dummy"
           TopLeft="273.749987762422,344.315786198236" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Cargar dummy\Leer registro dummy"
-          TopLeft="159.999992847443,82.1052622563952" />
+          TopLeft="159.999992847443,81.1052622563952" />
         <EdgeLayout
           Id="Package\Cargar dummy.Paths[OLE DB Source Output]"
-          TopLeft="237.333326180776,124.771928923062">
+          TopLeft="237.499992847443,124.105262256395">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="34.4583318525305,35.3333324769092"
+              EndConnector="34.124998519197,35.9999991435758"
               Start="0,0"
-              End="34.4583318525305,27.8333324769092">
+              End="34.124998519197,28.4999991435758">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.6666662384546" />
+                    End="0,13.9999995717879" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.6666662384546"
-                    Point2="0,17.6666662384546"
-                    Point3="4,17.6666662384546" />
+                    Point1="0,13.9999995717879"
+                    Point2="0,17.9999995717879"
+                    Point3="4,17.9999995717879" />
                   <mssgle:LineSegment
-                    End="30.4583318525305,17.6666662384546" />
+                    End="30.124998519197,17.9999995717879" />
                   <mssgle:CubicBezierSegment
-                    Point1="30.4583318525305,17.6666662384546"
-                    Point2="34.4583318525305,17.6666662384546"
-                    Point3="34.4583318525305,21.6666662384546" />
+                    Point1="30.124998519197,17.9999995717879"
+                    Point2="34.124998519197,17.9999995717879"
+                    Point3="34.124998519197,21.9999995717879" />
                   <mssgle:LineSegment
-                    End="34.4583318525305,27.8333324769092" />
+                    End="34.124998519197,28.4999991435758" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3225,7 +3230,9 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3258,47 +3265,33 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Insertar nuevos registros\Leer DIM_Producto"
-          TopLeft="181.999994575977,535.255633299171" />
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
-          Id="Package\Insertar nuevos registros\Sort 2"
-          TopLeft="208.857136366622,630.719290621917" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Insertar nuevos registros\Leer operacional"
           TopLeft="497.857127753751,533.719293512742" />
         <NodeLayout
-          Size="108,42.6666666666667"
+          Size="184,43"
+          Id="Package\Insertar nuevos registros\Insertar en DIM_Producto"
+          TopLeft="316.666657229265,899.629614430446" />
+        <NodeLayout
+          Size="99,43"
+          Id="Package\Insertar nuevos registros\Sort 2"
+          TopLeft="208.857136366622,630.719290621917" />
+        <NodeLayout
+          Size="132,43"
+          Id="Package\Insertar nuevos registros\Merge Join 1"
+          TopLeft="337.857132522122,731.719287611882" />
+        <NodeLayout
+          Size="108,43"
           Id="Package\Insertar nuevos registros\Sort 1 1"
           TopLeft="503.857127574937,636.719290443103" />
         <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Insertar nuevos registros\Merge Join 1"
-          TopLeft="337.857132522122,731.719287611882" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[OLE DB Source Output]"
-          TopLeft="258.761898804633,577.922299965837">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.7969906560792"
-              Start="0,0"
-              End="0,45.2969906560792">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.2969906560792" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="155,43"
+          Id="Package\Insertar nuevos registros\Leer DIM_Producto"
+          TopLeft="181.999994575977,535.255633299171" />
+        <NodeLayout
+          Size="165,43"
+          Id="Package\Insertar nuevos registros\Conditional Split 1"
+          TopLeft="329.999990165234,819.259247338331" />
         <EdgeLayout
           Id="Package\Insertar nuevos registros.Paths[OLE DB Source Output1]"
           TopLeft="575.190461087084,576.385960179408">
@@ -3334,31 +3327,77 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Sort Output]"
-          TopLeft="258.190469699955,673.385957288584">
+          Id="Package\Insertar nuevos registros.Paths[OLE DB Source Output]"
+          TopLeft="258.761898804633,577.922299965837">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="145.666662822167,58.3333303232988"
+              EndConnector="0,52.7969906560792"
               Start="0,0"
-              End="145.666662822167,50.8333303232988">
+              End="0,45.2969906560792">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.1666651616494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.1666651616494"
-                    Point2="0,29.1666651616494"
-                    Point3="4,29.1666651616494" />
+                    End="0,45.2969906560792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[NUEVO]"
+          TopLeft="410.666657030583,861.925914004997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.7037004254483"
+              Start="0,0"
+              End="0,30.2037004254483">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="141.666662822167,29.1666651616494" />
-                  <mssgle:CubicBezierSegment
-                    Point1="141.666662822167,29.1666651616494"
-                    Point2="145.666662822167,29.1666651616494"
-                    Point3="145.666662822167,33.1666651616494" />
+                    End="0,30.2037004254483" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.28146484375,7.10185021272417,32.825625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar nuevos registros.Paths[Merge Join Output]"
+          TopLeft="403.857132522122,774.385954278548">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.80952430977845,44.8732930597824"
+              Start="0,0"
+              End="8.80952430977845,37.3732930597824">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="145.666662822167,50.8333303232988" />
+                    End="0,18.4366465298912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4366465298912"
+                    Point2="0,22.4366465298912"
+                    Point3="4,22.4366465298912" />
+                  <mssgle:LineSegment
+                    End="4.80952430977845,22.4366465298912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.80952430977845,22.4366465298912"
+                    Point2="8.80952430977845,22.4366465298912"
+                    Point3="8.80952430977845,26.4366465298912" />
+                  <mssgle:LineSegment
+                    End="8.80952430977845,37.3732930597824" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3401,36 +3440,32 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165.333333333334,42.6666666666667"
-          Id="Package\Insertar nuevos registros\Conditional Split 1"
-          TopLeft="329.999990165234,819.259247338331" />
         <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[Merge Join Output]"
-          TopLeft="403.857132522122,774.385954278548">
+          Id="Package\Insertar nuevos registros.Paths[Sort Output]"
+          TopLeft="258.190469699955,673.385957288584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.80952430977845,44.8732930597824"
+              EndConnector="145.666662822167,58.3333303232988"
               Start="0,0"
-              End="8.80952430977845,37.3732930597824">
+              End="145.666662822167,50.8333303232988">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.4366465298912" />
+                    End="0,25.1666651616494" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.4366465298912"
-                    Point2="0,22.4366465298912"
-                    Point3="4,22.4366465298912" />
+                    Point1="0,25.1666651616494"
+                    Point2="0,29.1666651616494"
+                    Point3="4,29.1666651616494" />
                   <mssgle:LineSegment
-                    End="4.80952430977845,22.4366465298912" />
+                    End="141.666662822167,29.1666651616494" />
                   <mssgle:CubicBezierSegment
-                    Point1="4.80952430977845,22.4366465298912"
-                    Point2="8.80952430977845,22.4366465298912"
-                    Point3="8.80952430977845,26.4366465298912" />
+                    Point1="141.666662822167,29.1666651616494"
+                    Point2="145.666662822167,29.1666651616494"
+                    Point3="145.666662822167,33.1666651616494" />
                   <mssgle:LineSegment
-                    End="8.80952430977845,37.3732930597824" />
+                    End="145.666662822167,50.8333303232988" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3439,39 +3474,11 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="184,42.6666666666667"
-          Id="Package\Insertar nuevos registros\Insertar en DIM_Producto"
-          TopLeft="316.666657229265,899.629614430446" />
-        <EdgeLayout
-          Id="Package\Insertar nuevos registros.Paths[NUEVO]"
-          TopLeft="410.666657030583,861.925914004997">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.7037004254483"
-              Start="0,0"
-              End="0,30.2037004254483">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.2037004254483" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-25.28146484375,7.10185021272417,50.5629296875,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Actualizar registros existentes\Leer operacional">
+    design-time-name="Package\Insertar nuevos registros\Leer operacional">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3479,7 +3486,7 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insertar nuevos registros\Leer DIM_Producto">
+    design-time-name="Package\Insertar nuevos registros\Insertar en DIM_Producto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3492,15 +3499,7 @@ JOIN Codigos CDur  ON P.id_duracion = CDur.codigo  AND CDur.tipo = 'duracion';</
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insertar nuevos registros\Leer operacional">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insertar nuevos registros\Insertar en DIM_Producto">
+    design-time-name="Package\Insertar nuevos registros\Leer DIM_Producto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

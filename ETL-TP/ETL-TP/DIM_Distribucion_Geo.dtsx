@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="DIM_Distribucion_Geo"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{7DFB99F2-1786-45F1-9725-2CFF3588A8CC}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{539BDA5A-29BF-4370-9B18-ECA1403C4E69}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADD/RBFbQUvzy0k/0DSUi6VtSWQ5GXT8nPrLAZw68eG3wAAAAAOgAAAAAIAACAAAACGhkjByy9ylAe4LLUPq/jzbnvrYJr2Zsu+VMCMzsWm7yAAAAD1qZBxDDvHgss/CmTIP065ZwofZN6ECzsRes5eCfkdw0AAAAAIoQa2UwO7cJVa8L2aLu37C2a5tc8JyhXksl4QTTNj8jmwMopNWOqcxpe7ZWcOZkhMYIK7ZOGBA1PTgCW4UhpA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsKWsbvtorU+t8YOT6mZdJQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADzqBnzbDD3TzeQxWW/aWhiZSq9On+y0SW+jPtT3+W23gAAAAAOgAAAAAIAACAAAABy/Ti/RJGdLZgaLlRvSXQubWhP4KBuet7STphl9XEKcCAAAAC9mrjdbrI6G17uTuOCNUAVjdtPcDt94E679u+qKIJpqkAAAACJu9np7xuoZYPLS/O0Xxl4jIuyRqk1HnoVgvAuu4unV5PPtC4THB/r9DP/eYSkprLKY3YJtcTvnrNf2MWn7UhU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -188,7 +188,7 @@
               <connections>
                 <connection
                   refId="Package\Cargar registro dummy\Cargar registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -466,7 +466,7 @@
               <connections>
                 <connection
                   refId="Package\Cargar registro dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -1620,7 +1620,7 @@
                   dataType="System.Int32"
                   description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
@@ -1628,11 +1628,11 @@
                 <property
                   dataType="System.Boolean"
                   description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
@@ -1641,7 +1641,7 @@
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
@@ -1654,22 +1654,6 @@
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nom_ciudad]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="nom_ciudad"
-                      externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ciudad]"
-                      lineageId="Package\Insertar nuevos registros\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[nom_ciudad]" />
-                    <inputColumn
-                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nom_depto]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="nom_depto"
-                      externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[departamento]"
-                      lineageId="Package\Insertar nuevos registros\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[nom_depto]" />
                     <inputColumn
                       refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nom_provincia]"
                       cachedCodepage="1252"
@@ -1686,6 +1670,22 @@
                       cachedName="nom_zona"
                       externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[zona]"
                       lineageId="Package\Insertar nuevos registros\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[nom_zona]" />
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nom_ciudad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nom_ciudad"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ciudad]"
+                      lineageId="Package\Insertar nuevos registros\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[nom_ciudad]" />
+                    <inputColumn
+                      refId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nom_depto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nom_depto"
+                      externalMetadataColumnId="Package\Insertar nuevos registros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[departamento]"
+                      lineageId="Package\Insertar nuevos registros\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[nom_depto]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1796,7 +1796,7 @@
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\Leer DIM_Tiempo.Connections[OleDbConnection]"
-                  connectionManagerID="{A9345036-F7EE-43E5-B855-208749227F12}:external"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
                   connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -3351,7 +3351,7 @@
         <NodeLayout
           Size="175,43"
           Id="Package\Cargar registro dummy\Cargar registro dummy"
-          TopLeft="177.624994160608,353.982452864902" />
+          TopLeft="179.624994160608,353.982452864902" />
         <NodeLayout
           Size="157,43"
           Id="Package\Cargar registro dummy\Existe el dummy?"
@@ -3436,9 +3436,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-185.374991869554,50.999998715363"
+              EndConnector="-183.374991869554,50.9999987153629"
               Start="0,0"
-              End="-185.374991869554,43.499998715363">
+              End="-183.374991869554,43.4999987153629">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3449,13 +3449,13 @@
                     Point2="0,25.4999993576815"
                     Point3="-4,25.4999993576815" />
                   <mssgle:LineSegment
-                    End="-181.374991869554,25.4999993576815" />
+                    End="-179.374991869554,25.4999993576815" />
                   <mssgle:CubicBezierSegment
-                    Point1="-181.374991869554,25.4999993576815"
-                    Point2="-185.374991869554,25.4999993576815"
-                    Point3="-185.374991869554,29.4999993576815" />
+                    Point1="-179.374991869554,25.4999993576815"
+                    Point2="-183.374991869554,25.4999993576815"
+                    Point3="-183.374991869554,29.4999993576815" />
                   <mssgle:LineSegment
-                    End="-185.374991869554,43.499998715363" />
+                    End="-183.374991869554,43.4999987153629" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4000,6 +4000,19 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Insertar nuevos registros\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar nuevos registros\Leer DIM_Tiempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

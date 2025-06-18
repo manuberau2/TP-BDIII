@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{226372A3-44F2-4C3B-A7A0-77CEEA3F58B9}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{DCA00618-BA91-437C-A0D0-96DB717C0533}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{59C3143E-32BD-4DB3-98ED-CE0AA8E73961}database-distribuidora.database.windows.net.DataWarehouse.sqladmin 1;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVaU1qpojBU20ZCoOnNzvTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBi2ffIDg7XjecPRvV4W7eFl16NECYSAMv9KPHTTEdAwAAAAAOgAAAAAIAACAAAAD8dk1pZLjr1XDu4o+UUE+mzFPv0vPixmnzQpmwyl52CCAAAAAuaO4uXjm2ftKE73iWjJLkVyLPsZZthC0TV1ORjr3lrUAAAADKeAxU2T9IpgsF3uqRM5GThAH/NXDZXw1Nz1lFLbqoZ37XhL5nsmer6PQbW+o5WVnocMJZY5dVX1AwMk8muU4g</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=database-distribuidora.database.windows.net;User ID=sqladmin;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{59C3143E-32BD-4DB3-98ED-CE0AA8E73961}database-distribuidora.database.windows.net.DataWarehouse.sqladmin 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -109,8 +104,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar registro dummy\Cargar registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{5BFC9E1F-3653-40E1-B37B-F085558B4444}:invalid"
-                  connectionManagerRefId="{5BFC9E1F-3653-40E1-B37B-F085558B4444}:invalid"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -121,6 +116,22 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[sueldo_key]"
+                      cachedDataType="i4"
+                      cachedName="sueldo_key"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[sueldo_key]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[sueldo_key]" />
+                    <inputColumn
+                      refId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].Columns[rango_sueldo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rango_sueldo"
+                      externalMetadataColumnId="Package\Cargar registro dummy\Cargar registro dummy.Inputs[OLE DB Destination Input].ExternalColumns[rango_sueldo]"
+                      lineageId="Package\Cargar registro dummy\Preparar datos.Outputs[Derived Column Output].Columns[rango_sueldo]" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -329,8 +340,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar registro dummy\Leer registro dummy.Connections[OleDbConnection]"
-                  connectionManagerID="{5BFC9E1F-3653-40E1-B37B-F085558B4444}:invalid"
-                  connectionManagerRefId="{5BFC9E1F-3653-40E1-B37B-F085558B4444}:invalid"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1469,8 +1480,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Insertar nuevos registros\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin 1]"
+                  connectionManagerID="{ECC45ED8-81DE-4D12-8196-485CCD37A361}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[database-distribuidora.database.windows.net.DataWarehouse.sqladmin]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1566,11 +1577,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152.8,43.2"
+          Size="153,43"
           Id="Package\Cargar registro dummy"
           TopLeft="69.999999552965,60" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\Insertar nuevos registros"
           TopLeft="60,255.684208377741" />
         <EdgeLayout
@@ -1616,19 +1627,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="155.2,43.2"
+          Size="155,43"
           Id="Package\Cargar registro dummy\Leer registro dummy"
           TopLeft="140.624993713573,54.7368415042634" />
         <NodeLayout
-          Size="156.8,43.2"
+          Size="157,43"
           Id="Package\Cargar registro dummy\Existe el dummy?"
           TopLeft="180.374993322417,149.842103617921" />
         <NodeLayout
-          Size="156,43.2"
+          Size="156,43"
           Id="Package\Cargar registro dummy\Preparar datos"
           TopLeft="372.499986030162,259.982454149539" />
         <NodeLayout
-          Size="175.2,43.2"
+          Size="175,43"
           Id="Package\Cargar registro dummy\Cargar registro dummy"
           TopLeft="177.624994160608,353.982452864902" />
         <EdgeLayout
@@ -1739,6 +1750,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Cargar registro dummy\Leer registro dummy">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Cargar registro dummy\Cargar registro dummy">
     <Properties>
       <Property>
@@ -1751,25 +1770,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar registro dummy\Leer registro dummy">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Insertar nuevos registros">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="184,42.4"
+          Size="184,42"
           Id="Package\Insertar nuevos registros\Componente de script"
           TopLeft="60,60" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Insertar nuevos registros\OLE DB Destination"
           TopLeft="109.166660702063,207.999998553594" />
         <EdgeLayout

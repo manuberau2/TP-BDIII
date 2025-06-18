@@ -1,10 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kevin\\source\\repos\\TP-BDIII\\ETL-TP\\",
+  "WorkspaceRootPath": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\Kevin\\source\\repos\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Ventas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\FACT_Ventas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Desempeno_Vendedores.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\FACT_Desempeno_Vendedores.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Producto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Producto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Vendedor.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Vendedor.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Sueldo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Sueldo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Rubro.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Rubro.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Distribucion_Geo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Capacitacion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Capacitacion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Antiguedad.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{15DE65C9-E6CD-4008-8311-D849CFDDC3E1}|ETL-TP\\ETL-TP.dtproj|solutionrelative:ETL-TP\\DIM_Antiguedad.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,15 +65,115 @@
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FACT_Ventas.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Ventas.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\FACT_Ventas.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Ventas.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\FACT_Ventas.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:33:57.545Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FACT_Desempeno_Vendedores.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Desempeno_Vendedores.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\FACT_Desempeno_Vendedores.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\FACT_Desempeno_Vendedores.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\FACT_Desempeno_Vendedores.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:33:49.199Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DIM_Vendedor.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Vendedor.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Vendedor.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Vendedor.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Vendedor.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:25:00.156Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DIM_Distribucion_Geo.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Kevin\\source\\repos\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx",
               "RelativeDocumentMoniker": "ETL-TP\\DIM_Distribucion_Geo.dtsx",
-              "ToolTip": "C:\\Users\\Kevin\\source\\repos\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Distribucion_Geo.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "ETL-TP\\DIM_Distribucion_Geo.dtsx [Dise\u00F1o]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMlSURBVDhPjZQ7bJtVGIaf41vsOk7ihICdxK1wiWiTFhW1QBEDapEQAnVoOzGUAalDNybECgsINqQOrBUDGzAgIUCVijoUqAQoTuM4JW4dO3Yuvvz2/9v//TC4/mM7ROGVPumc73zvq/d85yIAPvniq9/S8ydf4hComk5lZ/fHv\u002B7fu/nd11/\u002BMLyOlDLQG59Mz5CamRosGMLdP1ZZWlk9r1mIK\u002B99wM/f37rTUmqqVyCE8ANcePPS9RdfWJidS0xxJDxyYOSL21iOGx6NRie3qsrs9NOJWkdt1rSW0u5p\u002Bjz1/wm/348r5eT2bu1iPJG\u002BFhmdmO9fHxDUTYfthuGFptsY1l5O1V0e5ov8nckSG42GipvlKy1Ve65fw\u002BshQHajxbf3Kt78jTPTTI\u002BF\u002BObXEgAtxSCeSPPOsyksy\u002Ban23f62F0MOHQl6K6P9vgM2sQsVjjWzTnQHksg506wcPYsr7\u002B8SDAYRAjRT4dhQQCkizA0hK4hbPNJTiKMDgHLIBYOMTE\u002BNszyMCA4Hg2yOBflVNzmdNxiOuwSiwRYTI1yatJmcdwiHnLoOP2sQQz08HgyyvFktD8FwLULKSSgW6BaUKjUhks87N/yAdAtaFmgGNC2wR8MAYf08J\u002Byxq3bG14sPW7iuNCxu86ahqRhSFRTIBFw2KEomsVyUSNTD7JUD1Jp\u002B9EdaJmgGJKG0XWomRLp2CBlPx2GBQEQPuRIBBmOYooAqtlzBnUdqk2TmqKju0Fik0mS6dML8dSZixw5dm6foE9A2OcSaZSJ1Es4quqJNXRodCSlrSaPNhq0gzMsnH\u002BbS\u002B9//OG5q5//wtF3bzJ8yidSMW5MRTAsUG1whZ\u002Bm2d1m0wTNAsuFuaciXH0tyW5Dp7SlUSlU90z1Btn1Te7ef8DSgxwrqznW13KsraywtpxhM5ehsZ5BLy7jNre6RCnptC2q9Q4t7ckD6Dk0TZs/Mzl2qgffrx4CE0cZOfY8hbLKWkEh\u002B1ihUvV\u002Br65gPv9webepy0Kh2M/9Tzwz/2rSFImU1Drkyy0elVVKO3uC\u002By/SYUi89RGzlz8dTqPlfyf72Sv/AiuphR\u002BNLPK3AAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-06-15T19:54:16.959Z",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:20:45.409Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DIM_Antiguedad.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Antiguedad.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Antiguedad.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Antiguedad.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Antiguedad.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:17:24.263Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DIM_Producto.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Producto.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Producto.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Producto.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Producto.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:22:13.28Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DIM_Rubro.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Rubro.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Rubro.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Rubro.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Rubro.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:23:05.425Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DIM_Sueldo.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Sueldo.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Sueldo.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Sueldo.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Sueldo.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:11:15.638Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DIM_Capacitacion.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Capacitacion.dtsx",
+              "RelativeDocumentMoniker": "ETL-TP\\DIM_Capacitacion.dtsx",
+              "ToolTip": "C:\\Users\\LautaroH\\Desktop\\TP-BDIII\\ETL-TP\\ETL-TP\\DIM_Capacitacion.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "ETL-TP\\DIM_Capacitacion.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-17T23:15:40.644Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
